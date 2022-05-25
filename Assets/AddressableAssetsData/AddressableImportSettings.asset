@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4457b6e6d3304bd46a31be63dad3325c, type: 3}
+  m_Name: AddressableImportSettings
+  m_EditorClassIdentifier: 
+  allowGroupCreation: 1
+  rules:
+  - path: Assets/AddressebleAssets/Prefabs/Dragons/(?<asset>.*)\.prefab
+    matchType: 1
+    groupName: ${PATH[2]}-${PATH[3]}
+    LabelMode: 1
+    labelRefs: []
+    dynamicLabels:
+    - pet
+    - preload
+    groupTemplate: {fileID: 11400000, guid: 504807343631746f3b5f22d115bbd35f, type: 2}
+    groupTemplateApplicationMode: 0
+    simplified: 1
+    addressReplacement: ^[A-Za-z_][A-Za-z0-9_]{0,15}(?:\.[A-Za-z_][A-Za-z0-9_]{0,15})*$
+  - path: Assets/AddressebleAssets/Prefabs/DragonEffects/(?<asset>.*)\.prefab
+    matchType: 1
+    groupName: ${PATH[2]}-${PATH[3]}
+    LabelMode: 1
+    labelRefs: []
+    dynamicLabels:
+    - dragon
+    - effects
+    groupTemplate: {fileID: 11400000, guid: 504807343631746f3b5f22d115bbd35f, type: 2}
+    groupTemplateApplicationMode: 0
+    simplified: 1
+    addressReplacement: ^[A-Za-z_][A-Za-z0-9_]{0,15}(?:\.[A-Za-z_][A-Za-z0-9_]{0,15})*$
+  - path: Assets/AddressebleAssets/Textures/Avartar/(?<asset>.*)\.png
+    matchType: 1
+    groupName: ${PATH[2]}-${PATH[3]}
+    LabelMode: 1
+    labelRefs: []
+    dynamicLabels:
+    - avatar
+    groupTemplate: {fileID: 11400000, guid: 504807343631746f3b5f22d115bbd35f, type: 2}
+    groupTemplateApplicationMode: 0
+    simplified: 1
+    addressReplacement: ^[A-Za-z_][A-Za-z0-9_]{0,15}(?:\.[A-Za-z_][A-Za-z0-9_]{0,15})*$

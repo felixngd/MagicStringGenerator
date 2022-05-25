@@ -1,0 +1,219 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
+  m_Name: AddressableAssetSettings
+  m_EditorClassIdentifier: 
+  m_DefaultGroup: 90a4a300af31b42ec85d3812632dd7f2
+  m_OptimizeCatalogSize: 0
+  m_BuildRemoteCatalog: 1
+  m_BundleLocalCatalog: 0
+  m_CatalogRequestsTimeout: 0
+  m_DisableCatalogUpdateOnStart: 0
+  m_IgnoreUnsupportedFilesInBuild: 0
+  m_UniqueBundleIds: 1
+  m_NonRecursiveBuilding: 1
+  m_CCDEnabled: 1
+  m_maxConcurrentWebRequests: 3
+  m_ContiguousBundles: 0
+  m_StripUnityVersionFromBundleBuild: 1
+  m_DisableVisibleSubAssetRepresentations: 0
+  m_ShaderBundleNaming: 0
+  m_ShaderBundleCustomNaming: 
+  m_MonoScriptBundleNaming: 1
+  m_CheckForContentUpdateRestrictionsOption: 0
+  m_BuildAndReleaseBinFileOption: 0
+  m_MonoScriptBundleCustomNaming: 
+  m_RemoteCatalogBuildPath:
+    m_Id: 3e7c1a5953af94383be3866f42f0c9da
+  m_RemoteCatalogLoadPath:
+    m_Id: 098272792eb88422c84f1394a3c4734a
+  m_ContentStateBuildPathProfileVariableName: <default settings path>
+  m_CustomContentStateBuildPath: 
+  m_ContentStateBuildPath: 
+  m_BuildAddressablesWithPlayerBuild: 0
+  m_overridePlayerVersion: 
+  m_GroupAssets:
+  - {fileID: 11400000, guid: 0ae07271971574d19bdaf83755003c30, type: 2}
+  - {fileID: 11400000, guid: d8bb5fd2fb32842aab1ac0e549ba2e6e, type: 2}
+  - {fileID: 11400000, guid: bf8b5730908524f40b0034e8ae0af532, type: 2}
+  - {fileID: 11400000, guid: f4658b62291b44ddf90aa51e336cc177, type: 2}
+  - {fileID: 11400000, guid: 584b25ed21ca74f038bceb1e1c10e957, type: 2}
+  m_BuildSettings:
+    m_CompileScriptsInVirtualMode: 0
+    m_CleanupStreamingAssetsAfterBuilds: 1
+    m_LogResourceManagerExceptions: 1
+    m_BundleBuildPath: Temp/com.unity.addressables/AssetBundles
+  m_ProfileSettings:
+    m_Profiles:
+    - m_InheritedParent: 
+      m_Id: 12426066a082a4d2f9a45310a0065131
+      m_ProfileName: Default
+      m_Values:
+      - m_Id: 688f5f983d6c642f38f66807a2747d1f
+        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+      - m_Id: 6ccd15e203aed43a3b0f52b4175a434b
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+      - m_Id: bab83d25cf9934e35b692e6ad7d64fcd
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: 3e7c1a5953af94383be3866f42f0c9da
+        m_Value: ServerData/[BuildTarget]
+      - m_Id: 098272792eb88422c84f1394a3c4734a
+        m_Value: http://[PrivateIpAddress]:[HostingServicePort]
+    - m_InheritedParent: 
+      m_Id: 5e24287a779544da388e9241f829bc47
+      m_ProfileName: Remote Profile
+      m_Values:
+      - m_Id: 688f5f983d6c642f38f66807a2747d1f
+        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+      - m_Id: 6ccd15e203aed43a3b0f52b4175a434b
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+      - m_Id: bab83d25cf9934e35b692e6ad7d64fcd
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: 3e7c1a5953af94383be3866f42f0c9da
+        m_Value: CCDBuildData/f93f5a51-74dc-43c8-bb48-fb65ec4b71e5/latest
+      - m_Id: 098272792eb88422c84f1394a3c4734a
+        m_Value: https://c3aec34d-3037-452f-bf3e-980974667c95.client-api.unity3dusercontent.com/client_api/v1/buckets/f93f5a51-74dc-43c8-bb48-fb65ec4b71e5/release_by_badge/latest/entry_by_path/content/?path=
+    m_ProfileEntryNames:
+    - m_Id: 688f5f983d6c642f38f66807a2747d1f
+      m_Name: BuildTarget
+      m_InlineUsage: 0
+    - m_Id: 6ccd15e203aed43a3b0f52b4175a434b
+      m_Name: Local.BuildPath
+      m_InlineUsage: 0
+    - m_Id: bab83d25cf9934e35b692e6ad7d64fcd
+      m_Name: Local.LoadPath
+      m_InlineUsage: 0
+    - m_Id: 3e7c1a5953af94383be3866f42f0c9da
+      m_Name: Remote.BuildPath
+      m_InlineUsage: 0
+    - m_Id: 098272792eb88422c84f1394a3c4734a
+      m_Name: Remote.LoadPath
+      m_InlineUsage: 0
+    m_ProfileVersion: 1
+  m_LabelTable:
+    m_LabelNames:
+    - default
+    - Dragon_11
+    - Dragon_11@Attack
+    - Dragon_11@AttackStand
+    - Dragon_11@Breath
+    - Dragon_11@Damage
+    - Dragon_11@Die
+    - Dragon_11@Idle
+    - Dragon_11@Run
+    - Dragon_11@Stand
+    - Dragon_11@Walk
+    - Dragon_12
+    - Dragon_12@Attack
+    - Dragon_12@AttackStand
+    - Dragon_12@Breath
+    - Dragon_12@Damage
+    - Dragon_12@Die
+    - Dragon_12@Idle
+    - Dragon_12@Run
+    - Dragon_12@Stand
+    - Dragon_12@Walk
+    - Dragon_13
+    - Dragon_13@Attack
+    - Dragon_13@AttackStand
+    - Dragon_13@Breath
+    - Dragon_13@Damage
+    - Dragon_13@Die
+    - Dragon_13@Idle
+    - Dragon_13@Run
+    - Dragon_13@Stand
+    - Dragon_13@Walk
+    - Dragon_21
+    - Dragon_21@Attack
+    - Dragon_21@AttackStand
+    - Dragon_21@Breath
+    - Dragon_21@Damage
+    - Dragon_21@Die
+    - Dragon_21@Idle
+    - Dragon_21@Run
+    - Dragon_21@Stand
+    - Dragon_21@Walk
+    - Dragon_22
+    - Dragon_22@Attack
+    - Dragon_22@AttackStand
+    - Dragon_22@Breath
+    - Dragon_22@Damage
+    - Dragon_22@Die
+    - Dragon_22@Idle
+    - Dragon_22@Run
+    - Dragon_22@Stand
+    - Dragon_22@Walk
+    - Dragon_23
+    - Dragon_23@Attack
+    - Dragon_23@AttackStand
+    - Dragon_23@Breath
+    - Dragon_23@Damage
+    - Dragon_23@Die
+    - Dragon_23@Idle
+    - Dragon_23@Run
+    - Dragon_23@Stand
+    - Dragon_23@Walk
+    - Dragon_31
+    - Dragon_31@Attack
+    - Dragon_31@AttackStand
+    - Dragon_31@Breath
+    - Dragon_31@Damage
+    - Dragon_31@Die
+    - Dragon_31@Idle
+    - Dragon_31@Run
+    - Dragon_31@Stand
+    - Dragon_31@Walk
+    - Dragon_32
+    - Dragon_32@Attack
+    - Dragon_32@AttackStand
+    - Dragon_32@Breath
+    - Dragon_32@Damage
+    - Dragon_32@Die
+    - Dragon_32@Idle
+    - Dragon_32@Run
+    - Dragon_32@Stand
+    - Dragon_32@Walk
+    - Dragon_33
+    - Dragon_33@Attack
+    - Dragon_33@AttackStand
+    - Dragon_33@Breath
+    - Dragon_33@Damage
+    - Dragon_33@Die
+    - Dragon_33@Idle
+    - Dragon_33@Run
+    - Dragon_33@Stand
+    - Dragon_33@Walk
+    - pet
+    - preload
+    - dragon
+    - effects
+    - avatar
+  m_SchemaTemplates: []
+  m_GroupTemplateObjects:
+  - {fileID: 11400000, guid: 39f7d3fabcc874afd97c02279922de2d, type: 2}
+  - {fileID: 11400000, guid: 504807343631746f3b5f22d115bbd35f, type: 2}
+  m_InitializationObjects: []
+  m_CertificateHandlerType:
+    m_AssemblyName: 
+    m_ClassName: 
+  m_ActivePlayerDataBuilderIndex: 3
+  m_DataBuilders:
+  - {fileID: 11400000, guid: 68f20254de68f432a96ec4bf3d088632, type: 2}
+  - {fileID: 11400000, guid: f04b6a0d4ed7b4647bc5c011aa6eccd6, type: 2}
+  - {fileID: 11400000, guid: 177374dfa1142435ebd3cfd49cf78138, type: 2}
+  - {fileID: 11400000, guid: 9a1a29b7d6fba4f289409494598005ca, type: 2}
+  m_ActiveProfileId: 5e24287a779544da388e9241f829bc47
+  m_HostingServicesManager:
+    m_HostingServiceInfos: []
+    m_Settings: {fileID: 11400000}
+    m_NextInstanceId: 0
+    m_RegisteredServiceTypeRefs: []

@@ -1,0 +1,214 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Prefabs-DragonEffects
+  m_EditorClassIdentifier: 
+  m_GroupName: Prefabs-DragonEffects
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 0b41cf6de15834cd7adfa88ed9d48e67
+  m_SerializeEntries:
+  - m_GUID: 053d61ad296aa9c42bd215c18b5575bc
+    m_Address: Eff_AttackStand
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - dragon
+    - effects
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 016e37bc44863a64abd43cfd282ca186
+    m_Address: Eff_Damage
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - dragon
+    - effects
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4616002b57ed10340b1ee9ebad2559f2
+    m_Address: Eff_Death
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - dragon
+    - effects
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a36e967f735e53f44b8e59e5e420458e
+    m_Address: Eff_Eat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - dragon
+    - effects
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9aef38125ea96c94b8ae51402bc33273
+    m_Address: Eff_FireAttack 1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - dragon
+    - effects
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 204cf0030c09f5e48bc908a3985e36cd
+    m_Address: Eff_FireAttack 2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - dragon
+    - effects
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 330ca8fb40e0f124ab592471e641bed5
+    m_Address: Eff_FireAttack 3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - dragon
+    - effects
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8f2c707a33b2a274bbea05a5e036f962
+    m_Address: Eff_FireBreath 1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - dragon
+    - effects
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8747e22ce9389e64799386308e7392db
+    m_Address: Eff_FireBreath 2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - dragon
+    - effects
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2aeb6020d6a05354d9b1443e0d178f3c
+    m_Address: Eff_FireBreath 3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - dragon
+    - effects
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7bcffb82f20a85e4eab27229bb716bef
+    m_Address: Eff_IceAttack 1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - dragon
+    - effects
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 19dc95948e5dc7747a6387209eab80c4
+    m_Address: Eff_IceAttack 2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - dragon
+    - effects
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cadbaee0a19d8ce4eb5e1fb32711e1cd
+    m_Address: Eff_IceAttack 3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - dragon
+    - effects
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8b72b4d620b642b49a9f436d2716e094
+    m_Address: Eff_IceBreath 1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - dragon
+    - effects
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0c20e4c5bdcfc8546981b429e94603c5
+    m_Address: Eff_IceBreath 2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - dragon
+    - effects
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ea028209b54e69c47845bcf1ae783df3
+    m_Address: Eff_IceBreath 3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - dragon
+    - effects
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 16377f7939acb4345a56ac98bf5b52e3
+    m_Address: Eff_LightningAttack 1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - dragon
+    - effects
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fe9aa8f6a1a68764b89a9a33fd245b02
+    m_Address: Eff_LightningAttack 2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - dragon
+    - effects
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2536769188fd9104bbd7ba41fec28cfc
+    m_Address: Eff_LightningAttack 3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - dragon
+    - effects
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e6de99b0aa0dd754fb168666bc97f551
+    m_Address: Eff_LightningBreath 1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - dragon
+    - effects
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 563833ba78f629c418847c6d10211ed3
+    m_Address: Eff_LightningBreath 2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - dragon
+    - effects
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9762a0a6f36fbf64fa581e4a57752938
+    m_Address: Eff_LightningBreath 3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - dragon
+    - effects
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d89152accb676bd46bb8c89edc6c10b8
+    m_Address: Eff_Run
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - dragon
+    - effects
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5238ecaab769ea74d933ae7f107994f5
+    m_Address: Eff_Sleep
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - dragon
+    - effects
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dca41b3d31f95084f8eba5f145550390
+    m_Address: Eff_Stand 1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - dragon
+    - effects
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 88d3af7b714b12345830e4328ef11dbe
+    m_Address: Eff_Stand 2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - dragon
+    - effects
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0064747e1307d5d41b1b36477c259466
+    m_Address: Eff_Stand 3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - dragon
+    - effects
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 9de77b530d08f4b6a82ee3da7f7b56f2, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 79c15c17e05e3465c99d431b647404d2, type: 2}
+    - {fileID: 11400000, guid: 38d37a77b13ad4dcf8298dad4d9ad7ec, type: 2}

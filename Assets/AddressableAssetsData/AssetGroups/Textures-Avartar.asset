@@ -1,0 +1,349 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Textures-Avartar
+  m_EditorClassIdentifier: 
+  m_GroupName: Textures-Avartar
+  m_Data:
+    m_SerializedData: []
+  m_GUID: bdfb17bfc6aba4fb1aa66a1208beef42
+  m_SerializeEntries:
+  - m_GUID: 777b62737db1b4f1b9e167c7f312dc50
+    m_Address: 00_1_Buttons
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0d6355464a16e44e9b1081216f57429a
+    m_Address: 00_2_Component
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ed07815638d2f4c7f86f2085eb5beb3e
+    m_Address: 00_3_FunctionIcons
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e29575e119b6a455ea1c3c94b44f14f9
+    m_Address: 00_4_EquipmentIcons
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1db4848d41cec47fb93dc60a441d9985
+    m_Address: 00_4_Icons1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 297d9c0e3877a45869772a04eee22ec5
+    m_Address: 00_4_Icons2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ece9163d934b749b49c114c85afa39e8
+    m_Address: 00_5_Guild_Flag
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d4c1d7ef9504f4fa3b8c6e6f8d353612
+    m_Address: 00_6_Chest
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: af7a74ca25b3b4d779c5c001c0a3d81c
+    m_Address: 01_Login
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b55816ada8f38448fb9150299886d534
+    m_Address: 02_Title
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b439de26fcd4f466799bd3f10c274496
+    m_Address: 03_TitleStart
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5d6d4417ceb1c4db099339665469c011
+    m_Address: 04_NetworkError
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6a286b19c92d9439cbcd9dd906f3b653
+    m_Address: 05_Home
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 37db52a99c50b4ebfbb5e96a6b39e0c6
+    m_Address: 06_PopupLogin
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: df11eee5a92844706ba9efbedfda36ce
+    m_Address: 07_PopupSignup
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: be4dd3ca5dfeb44f1a916c729ad5d367
+    m_Address: 08_PopupOffline
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8730aecd0017440b9a7068a37b515272
+    m_Address: 09_PopupName
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f17d6736829e44df0b2362037b17a0e3
+    m_Address: 10_ADRemove
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5f1642eccfb864c6282248b145e5b215
+    m_Address: 11_PopupChecking
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7e211d00479ac44118435fe60f7bd8cc
+    m_Address: 12_PopupEUALPrivacy
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3bf497821f2a149b2a68ea06ab38950c
+    m_Address: 13_PopupUpdate
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 777440ffc1bae49459573ee99f9edbb2
+    m_Address: 14_PopupMessage
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7e14de80a4dfc4e3eb054a7eb87be66d
+    m_Address: 20_PlayType1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 93d2ff424d08c4eba8828145e4cdd319
+    m_Address: 20_PlayType2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 75e7b4d92e8f94d2c9b3248a65bdfe0b
+    m_Address: 20_PlayType3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e28028328a92745d0a9c185fb5d76673
+    m_Address: 21_PlayBoss
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 636738bc4a96e45699f6b5f4c35209b6
+    m_Address: 22_PlayContinue
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 56eb37d00c54e438f8a9f6eea7430eba
+    m_Address: 23_PlayPause
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: db7162a5d40e04fb98d338a7df728dab
+    m_Address: 24_PlayResult
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f6be9d0a6fb174f4fb9bb864cac9601d
+    m_Address: 30_Tutorial
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 78c1574d9d743434f8eb624c341cacd5
+    m_Address: 31_CharacterSelect
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 104303a3072234f689881791d5f40727
+    m_Address: 32_Heroes
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 374bce621f457447fa766c8d37280249
+    m_Address: 33_Equipment
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1f3e69ab6a68d4ff7ac151875059eeb5
+    m_Address: 33_EquipmentDetail1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bfa41321903d04696b27704146e77d52
+    m_Address: 33_EquipmentDetail2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1d73a7826369248f1990a5644d3929fc
+    m_Address: 33_EquipmentDetail3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2f78d3b011ccf4ba8a68a22f4dd9afc9
+    m_Address: 34_GuideBook
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1b8f6666d6f10428a9f8d07c3fa73dbd
+    m_Address: 40_Stage
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8a758c9f92c5749d5a763b9d302e9dc6
+    m_Address: 41_Setting
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3e99ca3adfc0f434fa955dd7089111ef
+    m_Address: 42_Language
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: adbd4e3f401fc4ac69cc00b3896eb127
+    m_Address: 43_Shop_Chest
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b6b6c949495b44d29916caa96bd80e86
+    m_Address: 44_Shop_Gold
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0e5f9e69123e0445892b13e34db18049
+    m_Address: 45_Shop_Gem
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 650315e96751b401c880f396943fa8d3
+    m_Address: 46_BattlePass
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b681f8cfef20047c5a44d44eccaedc57
+    m_Address: 47_Missions
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cecb9b684e86a4f09a7028572cdfccc9
+    m_Address: 48_Guild
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: daa57960ffc56491da149610e2234b9b
+    m_Address: 50_Ranking
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c663089ea54ee4848a8a1db903b32054
+    m_Address: 60_PowerSave
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 57b12e5325437429fb3bf77fc0d33b61
+    m_Address: 61_LoadingBar
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bbb5b2a8f5b5b4ebfad6377f35992fd9
+    m_Address: 62_LevelUp
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 18061592d9b9a4e9d8c89f00d4dd0e35
+    m_Address: 63_Rate
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 74c7c2f81b1774cd986726847f3d3537
+    m_Address: 64_RewardDaily
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cdc07ad5f24974886a9213f8695701da
+    m_Address: 65_RewardWeek
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3e63867c9c80f4b479ecb5c78d161cd5
+    m_Address: 66_Roulette
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - avatar
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 9de77b530d08f4b6a82ee3da7f7b56f2, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: a6533ae3538a149268bb0010d9fbe50f, type: 2}
+    - {fileID: 11400000, guid: 89575bfed176c462993eb37b64c96a3d, type: 2}

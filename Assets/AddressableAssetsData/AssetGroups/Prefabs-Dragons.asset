@@ -1,0 +1,655 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Prefabs-Dragons
+  m_EditorClassIdentifier: 
+  m_GroupName: Prefabs-Dragons
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 1409f171e71f4462d9a4fe7a19e2a81b
+  m_SerializeEntries:
+  - m_GUID: e44285a4d26bce34baed5b226b315d78
+    m_Address: Dragon_11
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 391eb4919974a5f48b879857d150bce5
+    m_Address: Dragon_11@Attack
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d06bd2909456f7d4db2318a1215d89c6
+    m_Address: Dragon_11@AttackStand
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 11c376781cda3da42bd1a51b4dbf1393
+    m_Address: Dragon_11@Breath
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fe9b6a1fe314dcd4e922e7cf807382e6
+    m_Address: Dragon_11@Damage
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 86c0d8f216ac81c4884c6446698102e2
+    m_Address: Dragon_11@Die
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ff1404286d147854faa9f56ffbefa3f3
+    m_Address: Dragon_11@Idle
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a00d93971bb7f9d4ebbb6c8df37c5a75
+    m_Address: Dragon_11@Run
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 24c50486bfbf7c84d928eeb85f30a309
+    m_Address: Dragon_11@Stand
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8678bcce331190c4e956ccecb00235c1
+    m_Address: Dragon_11@Walk
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dbb713708e6aebd45b51bc5a1c3fba12
+    m_Address: Dragon_12
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d5997cd60cd5db34788e509222d83619
+    m_Address: Dragon_12@Attack
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ea71318c6ea1e744b84a8ee38e14e9f4
+    m_Address: Dragon_12@AttackStand
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0cadc8b036611184590f12658204cad3
+    m_Address: Dragon_12@Breath
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 057e87e1cdd36274a9b0472fbf402290
+    m_Address: Dragon_12@Damage
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8d312ec665a7be6449c0ad07d9c2faba
+    m_Address: Dragon_12@Die
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7c5519e2eb91331478c7c01de769e61e
+    m_Address: Dragon_12@Idle
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 65a1fd383de3d4645bdf69e695184aa2
+    m_Address: Dragon_12@Run
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6e4c4c0a0f8b0d142923be0e3da0fed3
+    m_Address: Dragon_12@Stand
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e3a8d3d2a4f9d2e438c7564c7104617b
+    m_Address: Dragon_12@Walk
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 22c51dc5f772ac54da1d8126bf220df2
+    m_Address: Dragon_13
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 70c5e1430d5ef2341bf6f5096c564cee
+    m_Address: Dragon_13@Attack
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6798c6f3b5690934183c5da3f621292f
+    m_Address: Dragon_13@AttackStand
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 88ed884de77a866478f232dc29ac73a6
+    m_Address: Dragon_13@Breath
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e7ca8368c2940c947a55d5036018ab1d
+    m_Address: Dragon_13@Damage
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3bc8dfba1c289ff4ab957f85c7721dfa
+    m_Address: Dragon_13@Die
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e99c7adb14cebe340bde4791e23c83c4
+    m_Address: Dragon_13@Idle
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1a9265e8d2deba54c8027b3ac02b11ca
+    m_Address: Dragon_13@Run
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c3516bf1869e21d4b8da9d72bd5ce239
+    m_Address: Dragon_13@Stand
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bbc54342d1cb7534ca8862f269c896f2
+    m_Address: Dragon_13@Walk
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6ab80b69bac8f56418573233fe0b7940
+    m_Address: Dragon_21
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 08d7f00676a68e84db52321e9f78ef40
+    m_Address: Dragon_21@Attack
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c38b25b4d49fbb24aa471556c4c3d935
+    m_Address: Dragon_21@AttackStand
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 66a67d1a1020428459408c9b6415b59a
+    m_Address: Dragon_21@Breath
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 43abbd8fb9d029c42aad20bc6a5c920c
+    m_Address: Dragon_21@Damage
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a475ebfee6ef5b446b42ec4d62e9d70f
+    m_Address: Dragon_21@Die
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6d225776697b8dc4cb7446ede8f2c099
+    m_Address: Dragon_21@Idle
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c47975c1e341e064cb12197350951fc8
+    m_Address: Dragon_21@Run
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f15a51da48ae5164b863bce545eaae31
+    m_Address: Dragon_21@Stand
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 32ac93e1fee602742961801869eda894
+    m_Address: Dragon_21@Walk
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e14ba10338af6aa4d944d41d0077ad21
+    m_Address: Dragon_22
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8496471f6f27cee4ab60ec143d903dc5
+    m_Address: Dragon_22@Attack
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 31a42b2d74b91cc4f99425bd44d7ef27
+    m_Address: Dragon_22@AttackStand
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cf10b15a8f9554243b276018d61aba58
+    m_Address: Dragon_22@Breath
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: df3d984c8083ee640bddfb2041abeb53
+    m_Address: Dragon_22@Damage
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3240b414c0ed6b14d82c1bfa66e8ae80
+    m_Address: Dragon_22@Die
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 68cd75d529acaa4488d072d3baea285b
+    m_Address: Dragon_22@Idle
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 22e31c916e8d17e4ca62324a41b4cc8d
+    m_Address: Dragon_22@Run
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5be90eed57aeb484d9044d1ce2583dae
+    m_Address: Dragon_22@Stand
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2fd370d44a3070344a3836c0a157dcd6
+    m_Address: Dragon_22@Walk
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5d4705f4b5f5613429b6fe278f5e6029
+    m_Address: Dragon_23
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fe34d57bf84d1dc4d8bd8ca8de64ba03
+    m_Address: Dragon_23@Attack
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cea782aaf4a877d4d828614dafc926b6
+    m_Address: Dragon_23@AttackStand
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 70f06dfd0750dca448efa942a063654c
+    m_Address: Dragon_23@Breath
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 59d102233eb98504781d0653b221cde0
+    m_Address: Dragon_23@Damage
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fb413c953e4703448af235e63f680f47
+    m_Address: Dragon_23@Die
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ab8af1d9ecaefad4db2d1f14500a5223
+    m_Address: Dragon_23@Idle
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3b128a4ba8e4a484bbd2f686692bd72e
+    m_Address: Dragon_23@Run
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8b04c121898183b4cbb94ecab26dc4e2
+    m_Address: Dragon_23@Stand
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 210f43155675a4a4ab95255f6d255700
+    m_Address: Dragon_23@Walk
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eeab9432e926a6b46b9845812a5c2b76
+    m_Address: Dragon_31
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3abbff58242ff374ea9f62fcc72bddd7
+    m_Address: Dragon_31@Attack
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7d92e24935dc64a41bb83101d97de6ab
+    m_Address: Dragon_31@AttackStand
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e702f439f63bc6f4593a7fd783c4cba0
+    m_Address: Dragon_31@Breath
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 641c3c298a94a1d4bb18eb19437f0ce7
+    m_Address: Dragon_31@Damage
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c9a5bcfde7b231f4394903504c552136
+    m_Address: Dragon_31@Die
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 200b399472d6dc2498a154e6ed738d18
+    m_Address: Dragon_31@Idle
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3b8ad1363d27a53438ec3b6b66fbf536
+    m_Address: Dragon_31@Run
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 17a86450509b74443b9d1434353aa374
+    m_Address: Dragon_31@Stand
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f0d2f52cf6b52f648956c97b89965650
+    m_Address: Dragon_31@Walk
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 380367b38e6565541abb16482da68a31
+    m_Address: Dragon_32
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 91908d2452955804a90463fbab59fc08
+    m_Address: Dragon_32@Attack
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 72a36c7b35dbf694abff6ec0b8975565
+    m_Address: Dragon_32@AttackStand
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 54bb57c35f7fb26409bd33383e323aaf
+    m_Address: Dragon_32@Breath
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e262b2f3f741ff549b5eaf5df910f93a
+    m_Address: Dragon_32@Damage
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 35e222f757dc8794abe6b6c8c954f673
+    m_Address: Dragon_32@Die
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ff4af3c66070c224d917b6ed83a5a709
+    m_Address: Dragon_32@Idle
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a9e23ad1524eb4e49a27f11afe6296ef
+    m_Address: Dragon_32@Run
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 97e2138c8708d0f4c8fe13d25d9ff80e
+    m_Address: Dragon_32@Stand
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 940cf8892fff3824faf075a0535b6a61
+    m_Address: Dragon_32@Walk
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fc650e941b040694c9cba5c9002fa23b
+    m_Address: Dragon_33
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: acb19c6360d7ecf459c55ad9982fee88
+    m_Address: Dragon_33@Attack
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4dacc7453a2f1ea4283d80e0d194ac85
+    m_Address: Dragon_33@AttackStand
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 93b0f38807b056043ad89068854184df
+    m_Address: Dragon_33@Breath
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 456c16b9ac84f9a4c9f72a6bc90f6b9a
+    m_Address: Dragon_33@Damage
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 755048e709ceff04e940f699c1fe87fc
+    m_Address: Dragon_33@Die
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7350e982c0cc01642831bbd284ae200e
+    m_Address: Dragon_33@Idle
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c1bf9808e0dfa544b8aef88ba9c321d5
+    m_Address: Dragon_33@Run
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 269e8d593f22ee74ea0ad8624d0aee31
+    m_Address: Dragon_33@Stand
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2f90c2155986fad42a749d92b6e190e9
+    m_Address: Dragon_33@Walk
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - pet
+    - preload
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 9de77b530d08f4b6a82ee3da7f7b56f2, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 70861faf8a39d492aa2564c900ac69ed, type: 2}
+    - {fileID: 11400000, guid: ff2d1e71f2ea44abf801769ccbc0b9bc, type: 2}
