@@ -8,7 +8,7 @@ fi
 OPTS_SPEC="\
 deploy.sh   --semver  <semver>\n\
 --\n\
-s,semver    Semantic versioning: 1.0.0, 1.0.0-preview\n\
+s,semver    Semantic versioning: 1.0.0, 1.0.0-preview.1\n\
 h,help      https://semver.org/
 "
 
