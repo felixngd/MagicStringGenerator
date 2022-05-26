@@ -31,7 +31,10 @@ namespace Wolffun.CodeGen.Addressables
         {
             var provider = CodeDomProvider.CreateProvider("CSharp");
             var options = new CodeGeneratorOptions();
-
+            options.BracingStyle = "C";
+            options.BlankLinesBetweenMembers = true;
+            options.VerbatimOrder = true;
+            
             using (var sourceWriter = new StreamWriter(fileName))
             {
                 provider.GenerateCodeFromCompileUnit(targetUnit, sourceWriter, options);

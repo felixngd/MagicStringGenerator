@@ -9,7 +9,7 @@ namespace Wolffun.CodeGen.Addressables
         
         
         //create a new asset
-        [MenuItem("Tools/CodeGen/Create Config Asset")]
+        //[MenuItem("Tools/CodeGen/Create Config Asset")]
         public static void CreateAsset()
         {
             var asset = CreateInstance<ConfigAsset>();
