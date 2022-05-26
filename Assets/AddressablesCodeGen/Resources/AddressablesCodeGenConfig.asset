@@ -15,4 +15,4 @@ MonoBehaviour:
   keyGeneratorConfig:
     namespace: Wolffun.CodeGen.Addressables
     className: AddressableKey
-    outputPath: AddressablesCodeGen/Editor
+    outputPath: Assets/AddressablesCodeGen/Editor

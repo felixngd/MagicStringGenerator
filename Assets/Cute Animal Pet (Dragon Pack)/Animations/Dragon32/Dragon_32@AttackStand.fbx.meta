@@ -1,0 +1,191 @@
+fileFormatVersion: 2
+guid: 11dc8e19724c4424eb990776481e2164
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Bip001
+    100002: Bip001_Head
+    100004: Bip001_Jaw
+    100006: Bip001_L_Calf
+    100008: Bip001_L_Clavicle
+    100010: Bip001_L_Foot
+    100012: Bip001_L_Forearm
+    100014: Bip001_L_Hand
+    100016: Bip001_L_Thigh
+    100018: Bip001_L_Toe0
+    100020: Bip001_L_UpperArm
+    100022: Bip001_Neck
+    100024: Bip001_Pelvis
+    100026: Bip001_R_Calf
+    100028: Bip001_R_Clavicle
+    100030: Bip001_R_Foot
+    100032: Bip001_R_Forearm
+    100034: Bip001_R_Hand
+    100036: Bip001_R_Thigh
+    100038: Bip001_R_Toe0
+    100040: Bip001_R_UpperArm
+    100042: Bip001_Spine
+    100044: Bone_L_Wing_01
+    100046: Bone_L_Wing_02
+    100048: Bone_L_Wing_03
+    100050: Bone_L_Wing_04
+    100052: Bone_L_Wing_05
+    100054: Bone_R_Wing_01
+    100056: Bone_R_Wing_02
+    100058: Bone_R_Wing_03
+    100060: Bone_R_Wing_04
+    100062: Bone_R_Wing_05
+    100064: Bone_Tail_01
+    100066: Bone_Tail_02
+    100068: //RootNode
+    100070: Dragon_32_0
+    100072: Dragon_32_2
+    100074: Dragon_32_base
+    100076: Shadow
+    100078: Shadow_0
+    100080: Skin
+    400000: Bip001
+    400002: Bip001_Head
+    400004: Bip001_Jaw
+    400006: Bip001_L_Calf
+    400008: Bip001_L_Clavicle
+    400010: Bip001_L_Foot
+    400012: Bip001_L_Forearm
+    400014: Bip001_L_Hand
+    400016: Bip001_L_Thigh
+    400018: Bip001_L_Toe0
+    400020: Bip001_L_UpperArm
+    400022: Bip001_Neck
+    400024: Bip001_Pelvis
+    400026: Bip001_R_Calf
+    400028: Bip001_R_Clavicle
+    400030: Bip001_R_Foot
+    400032: Bip001_R_Forearm
+    400034: Bip001_R_Hand
+    400036: Bip001_R_Thigh
+    400038: Bip001_R_Toe0
+    400040: Bip001_R_UpperArm
+    400042: Bip001_Spine
+    400044: Bone_L_Wing_01
+    400046: Bone_L_Wing_02
+    400048: Bone_L_Wing_03
+    400050: Bone_L_Wing_04
+    400052: Bone_L_Wing_05
+    400054: Bone_R_Wing_01
+    400056: Bone_R_Wing_02
+    400058: Bone_R_Wing_03
+    400060: Bone_R_Wing_04
+    400062: Bone_R_Wing_05
+    400064: Bone_Tail_01
+    400066: Bone_Tail_02
+    400068: //RootNode
+    400070: Dragon_32_0
+    400072: Dragon_32_2
+    400074: Dragon_32_base
+    400076: Shadow
+    400078: Shadow_0
+    400080: Skin
+    2100000: No Name
+    2300000: Shadow_0
+    3300000: Shadow_0
+    4300000: Shadow_0
+    4300002: Dragon_32_0
+    7400000: C4D Animation Take
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Dragon_32_0
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: f08a0832427d74149957ec235e275c87, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_Dragon_32
+    second: {fileID: 2100000, guid: 73515bd4462187f489d14e6aadfde3fa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shadow
+    second: {fileID: 2100000, guid: 34b7bacceceabad4e8a22583f18ce5ee, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
