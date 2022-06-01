@@ -5,8 +5,6 @@
 
 ## Cài đặt
 
-[Xem cách cài đặt packages từ git tag ở đây](https://www.notion.so/C-i-t-package-t-git-tag-000bfe854681454d8c60ac62d900803a)
-
 git: [`https://github.com/datndwolffun/AddressablesKeyGenerator.git`](https://github.com/datndwolffun/AddressablesKeyGenerator.git)
 
 chọn bản lớn nhất từ `com.wolffun.codegen.addressables`
