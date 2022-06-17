@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 // ReSharper disable CheckNamespace
-namespace Wolffun.CodeGen.Addressables
+namespace Wolffun.CodeGen.Addressables.Editor
 {
     public class ConfigAsset : ScriptableObject
     {
