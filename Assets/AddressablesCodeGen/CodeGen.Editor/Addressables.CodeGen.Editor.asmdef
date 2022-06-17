@@ -1,11 +1,11 @@
 {
-    "name": "CodeGen.Addressables",
+    "name": "Addressable.CodeGen.Editor",
+    "rootNamespace": "",
     "references": [
+        "Addressables.CodeGen.Runtime",
         "Unity.Addressables.Editor"
     ],
-    "includePlatforms": [
-        "Editor"
-    ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,

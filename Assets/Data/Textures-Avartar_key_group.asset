@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3152025ad104e2fa280326177e922a6, type: 3}
+  m_Name: Textures-Avartar_key_group
+  m_EditorClassIdentifier: 
+  GroupOrLabelName: Textures-Avartar
+  Keys:
+  - 00_1_Buttons
+  - 00_2_Component
+  - 00_3_FunctionIcons
+  - 00_4_EquipmentIcons
+  - 00_4_Icons1
+  - 00_4_Icons2
+  - 00_5_Guild_Flag
+  - 00_6_Chest
+  - 01_Login
+  - 02_Title
+  - 03_TitleStart
+  - 04_NetworkError
+  - 05_Home
+  - 06_PopupLogin
+  - 07_PopupSignup
+  - 08_PopupOffline
+  - 09_PopupName
+  - 10_ADRemove
+  - 11_PopupChecking
+  - 12_PopupEUALPrivacy
+  - 13_PopupUpdate
+  - 14_PopupMessage
+  - 20_PlayType1
+  - 20_PlayType2
+  - 20_PlayType3
+  - 21_PlayBoss
+  - 22_PlayContinue
+  - 23_PlayPause
+  - 24_PlayResult
+  - 30_Tutorial
+  - 31_CharacterSelect
+  - 32_Heroes
+  - 33_Equipment
+  - 33_EquipmentDetail1
+  - 33_EquipmentDetail2
+  - 33_EquipmentDetail3
+  - 34_GuideBook
+  - 40_Stage
+  - 41_Setting
+  - 42_Language
+  - 43_Shop_Chest
+  - 44_Shop_Gold
+  - 45_Shop_Gem
+  - 46_BattlePass
+  - 47_Missions
+  - 48_Guild
+  - 50_Ranking
+  - 60_PowerSave
+  - 61_LoadingBar
+  - 62_LevelUp
+  - 63_Rate
+  - 64_RewardDaily
+  - 65_RewardWeek
+  - 66_Roulette

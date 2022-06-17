@@ -1,15 +1,19 @@
 {
   "dependencies": {
+    "com.coffee.upm-git-extension": "2.0.0-preview.4",
+    "com.cysharp.unitask": "2.3.1",
+    "com.laicasaane.unity-addressables-manager": "https://github.com/felixngd/unity-addressables-manager.git#1.2.3",
     "com.littlebigfun.addressable-importer": "0.11.5",
     "com.unity.addressables": "1.20.0",
-    "com.unity.collab-proxy": "1.8.0",
-    "com.unity.ide.rider": "1.2.1",
-    "com.unity.ide.visualstudio": "2.0.11",
-    "com.unity.ide.vscode": "1.2.3",
+    "com.unity.collab-proxy": "1.15.16",
+    "com.unity.ide.rider": "2.0.7",
+    "com.unity.ide.visualstudio": "2.0.14",
+    "com.unity.ide.vscode": "1.2.5",
+    "com.unity.inputsystem": "1.3.0",
     "com.unity.services.ccd.management": "2.0.4",
-    "com.unity.test-framework": "1.1.27",
-    "com.unity.textmeshpro": "2.1.6",
-    "com.unity.timeline": "1.2.18",
+    "com.unity.test-framework": "1.1.31",
+    "com.unity.textmeshpro": "3.0.6",
+    "com.unity.timeline": "1.4.8",
     "com.unity.ugui": "1.0.0",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
@@ -48,6 +52,8 @@
       "name": "package.openupm.com",
       "url": "https://package.openupm.com",
       "scopes": [
+        "com.coffee.upm-git-extension",
+        "com.cysharp.unitask",
         "com.littlebigfun.addressable-importer",
         "com.openupm"
       ]

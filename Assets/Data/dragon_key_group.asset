@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3152025ad104e2fa280326177e922a6, type: 3}
+  m_Name: dragon_key_group
+  m_EditorClassIdentifier: 
+  GroupOrLabelName: dragon
+  Keys:
+  - Eff_AttackStand
+  - Eff_Damage
+  - Eff_Death
+  - Eff_Eat
+  - Eff_FireAttack 1
+  - Eff_FireAttack 2
+  - Eff_FireAttack 3
+  - Eff_FireBreath 1
+  - Eff_FireBreath 2
+  - Eff_FireBreath 3
+  - Eff_IceAttack 1
+  - Eff_IceAttack 2
+  - Eff_IceAttack 3
+  - Eff_IceBreath 1
+  - Eff_IceBreath 2
+  - Eff_IceBreath 3
+  - Eff_LightningAttack 1
+  - Eff_LightningAttack 2
+  - Eff_LightningAttack 3
+  - Eff_LightningBreath 1
+  - Eff_LightningBreath 2
+  - Eff_LightningBreath 3
+  - Eff_Run
+  - Eff_Sleep
+  - Eff_Stand 1
+  - Eff_Stand 2
+  - Eff_Stand 3

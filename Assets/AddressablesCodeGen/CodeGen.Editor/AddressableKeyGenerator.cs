@@ -3,13 +3,15 @@ using System.CodeDom;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEngine;
+
 // ReSharper disable CheckNamespace
 
-namespace Wolffun.CodeGen.Addressables
+namespace Wolffun.CodeGen.Addressables.Editor
 {
     public static class AddressableKeyGenerator
     {
@@ -24,9 +26,8 @@ namespace Wolffun.CodeGen.Addressables
                 Debug.LogError(e);
                 throw;
             }
-
         }
-        
+
         private static void GenerateCSharpCode(CodeCompileUnit targetUnit, string fileName)
         {
             var provider = CodeDomProvider.CreateProvider("CSharp");
@@ -34,12 +35,12 @@ namespace Wolffun.CodeGen.Addressables
             options.BracingStyle = "C";
             options.BlankLinesBetweenMembers = true;
             options.VerbatimOrder = true;
-            
+
             using (var sourceWriter = new StreamWriter(fileName))
             {
                 provider.GenerateCodeFromCompileUnit(targetUnit, sourceWriter, options);
             }
-            
+
             AssetDatabase.Refresh();
         }
 
@@ -126,6 +127,91 @@ namespace Wolffun.CodeGen.Addressables
             }
 
             return keyGroups;
+        }
+
+        //get all key by label
+        static Dictionary<string, HashSet<string>> GetLabelGroups()
+        {
+            var groups = UnityEditor.AddressableAssets.AddressableAssetSettingsDefaultObject.Settings.groups;
+            var labelGroups = new Dictionary<string, HashSet<string>>();
+            foreach (var group in groups)
+            {
+                var schema = group.Schemas[0];
+                var entries = schema.Group.entries;
+                foreach (var addressableAssetEntry in entries)
+                {
+                    var labels = addressableAssetEntry.labels;
+                    var key = addressableAssetEntry.address;
+                    //add label as key, addresses as value to labelGroups
+                    foreach (var label in labels)
+                    {
+                        if (labelGroups.ContainsKey(label))
+                        {
+                            var added = labelGroups[label].Add(key);
+                            if (!added)
+                            {
+                                Debug.LogWarning($"Duplicate key {key} in label {label}");
+                            }
+                        }
+                        else
+                        {
+                            labelGroups.Add(label, new HashSet<string> {key});
+                        }
+                    }
+                }
+            }
+
+            return labelGroups;
+        }
+
+        public static void CreateScriptableObjects(KeyGeneratorConfig config)
+        {
+            var labelGroups = GetLabelGroups();
+            foreach (var group in labelGroups)
+            {
+                var path = config.GetFullPathScriptableObject(group.Key + "_key_group");
+                var assetPath = AssetDatabase.GenerateUniqueAssetPath(path);
+                var keyGroupData = ScriptableObject.CreateInstance<AddressableKeyGroupData>();
+                keyGroupData.GroupOrLabelName = group.Key;
+                keyGroupData.Keys = group.Value.ToArray();
+                AssetDatabase.CreateAsset(keyGroupData, assetPath);
+            }
+            
+            var keyGroups = GetKeyGroups();
+            foreach (var group in keyGroups)
+            {
+                var path = config.GetFullPathScriptableObject(group.Key + "_key_group");
+                var assetPath = AssetDatabase.GenerateUniqueAssetPath(path);
+                var keyGroupData = ScriptableObject.CreateInstance<AddressableKeyGroupData>();
+                keyGroupData.GroupOrLabelName = group.Key;
+                keyGroupData.Keys = group.Value.ToArray();
+                AssetDatabase.CreateAsset(keyGroupData, assetPath);
+            }
+            
+            EditorUtility.FocusProjectWindow();
+        }
+        
+        public static void SetScriptableObject(AddressableKeyGroupData asset, string labelOrGroupName)
+        {
+            var labelGroups = GetLabelGroups();
+            if (labelGroups.ContainsKey(labelOrGroupName))
+            {
+                asset.GroupOrLabelName = labelOrGroupName;
+                asset.Keys = labelGroups[labelOrGroupName].ToArray();
+            }
+            else
+            {
+                var keyGroups = GetKeyGroups();
+                if (keyGroups.ContainsKey(labelOrGroupName))
+                {
+                    asset.GroupOrLabelName = labelOrGroupName;
+                    asset.Keys = keyGroups[labelOrGroupName].ToArray();
+                }
+                else
+                {
+                    Debug.LogError($"{labelOrGroupName} is not a valid label or group name");
+                }
+            }
         }
     }
 }
