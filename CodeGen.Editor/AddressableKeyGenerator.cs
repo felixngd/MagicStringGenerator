@@ -166,6 +166,8 @@ namespace Wolffun.CodeGen.Addressables.Editor
 
         public static void CreateScriptableObjects(KeyGeneratorConfig config)
         {
+            DeleteScriptableObjects<AddressableKeyGroupData>();
+
             var labelGroups = GetLabelGroups();
             foreach (var group in labelGroups)
             {
@@ -176,7 +178,7 @@ namespace Wolffun.CodeGen.Addressables.Editor
                 keyGroupData.Keys = group.Value.ToArray();
                 AssetDatabase.CreateAsset(keyGroupData, assetPath);
             }
-            
+
             var keyGroups = GetKeyGroups();
             foreach (var group in keyGroups)
             {
@@ -187,10 +189,64 @@ namespace Wolffun.CodeGen.Addressables.Editor
                 keyGroupData.Keys = group.Value.ToArray();
                 AssetDatabase.CreateAsset(keyGroupData, assetPath);
             }
-            
+
+            AssetDatabase.SaveAssets();
             EditorUtility.FocusProjectWindow();
         }
-        
+
+        public static void UpdateScriptableObjects()
+        {
+            var labelGroups = GetLabelGroups();
+            UpdateScriptableObjects(labelGroups);
+            var keyGroups = GetKeyGroups();
+            UpdateScriptableObjects(keyGroups);
+            AssetDatabase.SaveAssets();
+            EditorUtility.FocusProjectWindow();
+        }
+
+        private static void UpdateScriptableObjects(Dictionary<string, HashSet<string>> groups)
+        {
+            var guids = AssetDatabase.FindAssets($"t:{nameof(AddressableKeyGroupData)}");
+            if (guids.Length == 0)
+            {
+                Debug.LogWarning("No AddressableKeyGroupData found");
+                return;
+            }
+
+            foreach (var guid in guids)
+            {
+                var path = AssetDatabase.GUIDToAssetPath(guid);
+                var asset = AssetDatabase.LoadAssetAtPath<AddressableKeyGroupData>(path);
+                if (asset == null)
+                {
+                    Debug.LogWarning($"{path} is not a AddressableKeyGroupData");
+                    continue;
+                }
+
+                if (groups.ContainsKey(asset.GroupOrLabelName) &&
+                    groups[asset.GroupOrLabelName].ToArray() == asset.Keys)
+                {
+                    continue;
+                }
+
+                if (groups.ContainsKey(asset.GroupOrLabelName))
+                {
+                    asset.Keys = groups[asset.GroupOrLabelName].ToArray();
+                    Debug.Log($"{path} updated");
+                }
+            }
+        }
+
+        private static void DeleteScriptableObjects<T>() where T : ScriptableObject
+        {
+            var guids = AssetDatabase.FindAssets($"t:{typeof(T).Name}");
+            foreach (var guid in guids)
+            {
+                var path = AssetDatabase.GUIDToAssetPath(guid);
+                AssetDatabase.DeleteAsset(path);
+            }
+        }
+
         public static void SetScriptableObject(AddressableKeyGroupData asset, string labelOrGroupName)
         {
             var labelGroups = GetLabelGroups();
