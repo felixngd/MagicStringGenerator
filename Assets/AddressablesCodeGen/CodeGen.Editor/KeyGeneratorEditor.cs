@@ -117,6 +117,35 @@ namespace Wolffun.CodeGen.Addressables.Editor
                 EditorUtility.SetDirty(_config);
             }
         }
+        
+        [Button, VerticalGroup("Update scriptable objects of key groups")]
+        public void UpdateScriptableObjects()
+        {
+            if (string.IsNullOrEmpty(scriptableObjectOutputPath))
+            {
+                //dialog
+                EditorUtility.DisplayDialog("Error", "Scriptable object output path cannot be empty", "Ok");
+                return;
+            }
+
+            _config.keyGeneratorConfig.ScriptableObjectPath = scriptableObjectOutputPath;
+
+            try
+            {
+                AddressableKeyGenerator.UpdateScriptableObjects();
+                //dialog
+                EditorUtility.DisplayDialog("Success", "Scriptable objects updated successfully", "Ok");
+            }
+            catch (Exception e)
+            {
+                Debug.LogError(e);
+                throw;
+            }
+            finally
+            {
+                EditorUtility.SetDirty(_config);
+            }
+        }
 
 
 #else
@@ -245,6 +274,34 @@ namespace Wolffun.CodeGen.Addressables.Editor
                     AddressableKeyGenerator.CreateScriptableObjects(_config.keyGeneratorConfig);
                     //dialog
                     EditorUtility.DisplayDialog("Success", "Scriptable objects created successfully", "Ok");
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError(e);
+                    throw;
+                }
+                finally
+                {
+                    EditorUtility.SetDirty(_config);
+                }
+            }
+            
+            if(GUILayout.Button("Update Scriptable Objects"))
+            {
+                if (string.IsNullOrEmpty(scriptableObjectOutputPathField))
+                {
+                    //dialog
+                    EditorUtility.DisplayDialog("Error", "Scriptable object output path cannot be empty", "Ok");
+                    return;
+                }
+
+                _config.keyGeneratorConfig.ScriptableObjectPath = scriptableObjectOutputPathField;
+
+                try
+                {
+                    AddressableKeyGenerator.UpdateScriptableObjects();
+                    //dialog
+                    EditorUtility.DisplayDialog("Success", "Scriptable objects updated successfully", "Ok");
                 }
                 catch (Exception e)
                 {
