@@ -132,7 +132,14 @@ namespace Wolffun.CodeGen.MagicString.Editor
                         }
                         keys.Add(key);
                     }
-                    keyGroups.Add(table.TableCollectionName, keys);
+                    if(keyGroups.ContainsKey(table.TableCollectionName))
+                    {
+                        keyGroups[table.TableCollectionName].UnionWith(keys);
+                    }
+                    else
+                    {
+                        keyGroups.Add(table.TableCollectionName, keys);
+                    }
                 }
 
             }
