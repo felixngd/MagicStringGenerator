@@ -16,4 +16,4 @@ MonoBehaviour:
     namespace: Wolffun.CodeGen.Localization
     className: LocalizationKey
     staticClassOutputPath: Assets/Scripts/Generated
-    scriptableObjectPath: Assets/Data
+    scriptableObjectPath: 
