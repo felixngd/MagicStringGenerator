@@ -16,7 +16,12 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 90a4a300af31b42ec85d3812632dd7f2
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 777b62737db1b4f1b9e167c7f312dc50
+    m_Address: Assets/AddressebleAssets/Textures/Avartar/00_1_Buttons.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 9de77b530d08f4b6a82ee3da7f7b56f2, type: 2}
   m_SchemaSet:

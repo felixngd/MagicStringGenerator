@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace Wolffun.CodeGen.Addressables.Editor
+namespace Wolffun.CodeGen.MagicString.Editor
 {
     [CustomEditor(typeof(AddressableKeyGroupData))]
     public class AddressableKeyGroupDataEditor : UnityEditor.Editor
@@ -23,7 +23,7 @@ namespace Wolffun.CodeGen.Addressables.Editor
             //button
             if (GUILayout.Button("Set data"))
             {
-                AddressableKeyGenerator.SetScriptableObject(_target, _target.GroupOrLabelName);
+                MagicStringGenerator.SetScriptableObject(_target, _target.GroupOrLabelName);
             }
         }
     }

@@ -8,7 +8,7 @@ using UnityEngine;
 
 // ReSharper disable CheckNamespace
 
-namespace Wolffun.CodeGen.Addressables.Editor
+namespace Wolffun.CodeGen.MagicString.Editor
 {
 #if ODIN_INSPECTOR || ODIN_INSPECTOR_3_0_OR_NEWER
     public class KeyGeneratorEditor : OdinEditorWindow
@@ -17,62 +17,75 @@ namespace Wolffun.CodeGen.Addressables.Editor
     public class KeyGeneratorEditor : EditorWindow
     {
 #endif
-        [MenuItem("Tools/CodeGen/Addressable Key Generator")]
+        [MenuItem("Tools/CodeGen/Magic String Generator")]
         public static void ShowWindow()
         {
             GetWindow(typeof(KeyGeneratorEditor));
         }
 #if ODIN_INSPECTOR || ODIN_INSPECTOR_3_0_OR_NEWER
-        [LabelText("Namespace"), VerticalGroup("Generate keys in static class")] public string nameSpace = "Wolffun.CodeGen.Addressables";
-        [LabelText("Class Name"), VerticalGroup("Generate keys in static class")] public string className = "AddressableKey";
-        [FolderPath, VerticalGroup("Generate keys in static class")] public string outputPath = "Assets/Scripts/Addressables";
+        [LabelText("Namespace"), TabGroup("Addressable Magic Strings")] public string addressableStringNameSpace = "Wolffun.CodeGen.Addressables";
+        [LabelText("Class Name"), TabGroup("Addressable Magic Strings")] public string addressableStringClassName = "AddressableKey";
+        [LabelText("Output Path"), FolderPath, TabGroup("Addressable Magic Strings")] public string addressableStringOutputPath = "Assets/Scripts/Generated";
+        
+        [LabelText("Namespace"), TabGroup("Localization Magic Strings")] public string localizationStringNameSpace = "Wolffun.CodeGen.Localization";
+        [LabelText("Class Name"), TabGroup("Localization Magic Strings")] public string localizationStringClassName = "L";
+        [LabelText("Output Path"), FolderPath, TabGroup("Localization Magic Strings")] public string localizationStringOutputPath = "Assets/Scripts/Generated";
 
-        private ConfigAsset _config;
+        private ConfigAsset _addressableStringConfig;
+        private ConfigAsset _localizationStringConfig;
 
         protected override void OnEnable()
         {
-            _config = Resources.Load<ConfigAsset>("AddressablesCodeGenConfig");
-            if (_config.keyGeneratorConfig != null)
+            _addressableStringConfig = Resources.Load<ConfigAsset>("AddressablesCodeGenConfig");
+            if (_addressableStringConfig.keyGeneratorConfig != null)
             {
-                nameSpace = _config.keyGeneratorConfig.Namespace;
-                className = _config.keyGeneratorConfig.ClassName;
-                outputPath = _config.keyGeneratorConfig.StaticClassOutputPath;
+                addressableStringNameSpace = _addressableStringConfig.keyGeneratorConfig.Namespace;
+                addressableStringClassName = _addressableStringConfig.keyGeneratorConfig.ClassName;
+                addressableStringOutputPath = _addressableStringConfig.keyGeneratorConfig.StaticClassOutputPath;
+            }
+            
+            _localizationStringConfig = Resources.Load<ConfigAsset>("LocalizationCodeGenConfig");
+            if (_localizationStringConfig.keyGeneratorConfig != null)
+            {
+                localizationStringNameSpace = _localizationStringConfig.keyGeneratorConfig.Namespace;
+                localizationStringClassName = _localizationStringConfig.keyGeneratorConfig.ClassName;
+                localizationStringOutputPath = _localizationStringConfig.keyGeneratorConfig.StaticClassOutputPath;
             }
         }
 
-        [Button, VerticalGroup("Generate keys in static class")]
-        public void Generate()
+        [Button, TabGroup("Addressable Magic Strings")]
+        public void GenerateAddressableStrings()
         {
-            if (string.IsNullOrEmpty(nameSpace))
+            if (string.IsNullOrEmpty(addressableStringNameSpace))
             {
                 //dialog
                 EditorUtility.DisplayDialog("Error", "Namespace cannot be empty", "Ok");
                 return;
             }
 
-            if (string.IsNullOrEmpty(outputPath))
+            if (string.IsNullOrEmpty(addressableStringOutputPath))
             {
                 //dialog
                 EditorUtility.DisplayDialog("Error", "Output path cannot be empty", "Ok");
                 return;
             }
 
-            if (string.IsNullOrEmpty(className))
+            if (string.IsNullOrEmpty(addressableStringClassName))
             {
                 //dialog
                 EditorUtility.DisplayDialog("Error", "Class name cannot be empty", "Ok");
                 return;
             }
 
-            _config.keyGeneratorConfig = new KeyGeneratorConfig()
+            _addressableStringConfig.keyGeneratorConfig = new KeyGeneratorConfig()
             {
-                Namespace = nameSpace,
-                ClassName = className,
-                StaticClassOutputPath = outputPath
+                Namespace = addressableStringNameSpace,
+                ClassName = addressableStringClassName,
+                StaticClassOutputPath = addressableStringOutputPath
             };
             try
             {
-                AddressableKeyGenerator.GenerateAddressableKeys(_config.keyGeneratorConfig);
+                MagicStringGenerator.GenerateAddressableKeys(_addressableStringConfig.keyGeneratorConfig);
                 //dialog
                 EditorUtility.DisplayDialog("Success", "Addressable keys generated successfully", "Ok");
             }
@@ -83,13 +96,61 @@ namespace Wolffun.CodeGen.Addressables.Editor
             }
             finally
             {
-                EditorUtility.SetDirty(_config);
+                EditorUtility.SetDirty(_addressableStringConfig);
             }
         }
 
-        [FolderPath, VerticalGroup("Generate scriptable objects of key groups")] public string scriptableObjectOutputPath = "";
+        [Button, TabGroup("Localization Magic Strings")]
+        public void GenerateLocalizationStrings()
+        {
+            if (string.IsNullOrEmpty(addressableStringNameSpace))
+            {
+                //dialog
+                EditorUtility.DisplayDialog("Error", "Namespace cannot be empty", "Ok");
+                return;
+            }
+            
+            if (string.IsNullOrEmpty(localizationStringOutputPath))
+            {
+                //dialog
+                EditorUtility.DisplayDialog("Error", "Output path cannot be empty", "Ok");
+                return;
+            }
+            
+            if (string.IsNullOrEmpty(localizationStringClassName))
+            {
+                //dialog
+                EditorUtility.DisplayDialog("Error", "Class name cannot be empty", "Ok");
+                return;
+            }
+            
+            _localizationStringConfig.keyGeneratorConfig = new KeyGeneratorConfig()
+            {
+                Namespace = localizationStringNameSpace,
+                ClassName = localizationStringClassName,
+                StaticClassOutputPath = localizationStringOutputPath
+            };
+            
+            try
+            {
+                MagicStringGenerator.GenerateLocalizationKeys(_localizationStringConfig.keyGeneratorConfig);
+                //dialog
+                EditorUtility.DisplayDialog("Success", "Localization keys generated successfully", "Ok");
+            }
+            catch (Exception e)
+            {
+                Debug.LogError(e);
+                throw;
+            }
+            finally
+            {
+                EditorUtility.SetDirty(_localizationStringConfig);
+            }
+        }
 
-        [Button, VerticalGroup("Generate scriptable objects of key groups")]
+        [FolderPath, LabelText("Generate scriptable objects of key groups", true), TabGroup("Addressable Magic Strings")] public string scriptableObjectOutputPath = "";
+
+        [Button, LabelText("Generate scriptable objects of key groups"), TabGroup("Addressable Magic Strings")]
         public void CreateScriptableObjects()
         {
             if (string.IsNullOrEmpty(scriptableObjectOutputPath))
@@ -99,11 +160,11 @@ namespace Wolffun.CodeGen.Addressables.Editor
                 return;
             }
 
-            _config.keyGeneratorConfig.ScriptableObjectPath = scriptableObjectOutputPath;
+            _addressableStringConfig.keyGeneratorConfig.ScriptableObjectPath = scriptableObjectOutputPath;
 
             try
             {
-                AddressableKeyGenerator.CreateScriptableObjects(_config.keyGeneratorConfig);
+                MagicStringGenerator.CreateScriptableObjects(_addressableStringConfig.keyGeneratorConfig);
                 //dialog
                 EditorUtility.DisplayDialog("Success", "Scriptable objects created successfully", "Ok");
             }
@@ -114,11 +175,11 @@ namespace Wolffun.CodeGen.Addressables.Editor
             }
             finally
             {
-                EditorUtility.SetDirty(_config);
+                EditorUtility.SetDirty(_addressableStringConfig);
             }
         }
         
-        [Button, VerticalGroup("Update scriptable objects of key groups")]
+        [Button, LabelText("Update scriptable objects of key groups"), TabGroup("Addressable Magic Strings")]
         public void UpdateScriptableObjects()
         {
             if (string.IsNullOrEmpty(scriptableObjectOutputPath))
@@ -128,11 +189,11 @@ namespace Wolffun.CodeGen.Addressables.Editor
                 return;
             }
 
-            _config.keyGeneratorConfig.ScriptableObjectPath = scriptableObjectOutputPath;
+            _addressableStringConfig.keyGeneratorConfig.ScriptableObjectPath = scriptableObjectOutputPath;
 
             try
             {
-                AddressableKeyGenerator.UpdateScriptableObjects();
+                MagicStringGenerator.UpdateScriptableObjects();
                 //dialog
                 EditorUtility.DisplayDialog("Success", "Scriptable objects updated successfully", "Ok");
             }
@@ -143,7 +204,7 @@ namespace Wolffun.CodeGen.Addressables.Editor
             }
             finally
             {
-                EditorUtility.SetDirty(_config);
+                EditorUtility.SetDirty(_addressableStringConfig);
             }
         }
 
@@ -313,6 +374,8 @@ namespace Wolffun.CodeGen.Addressables.Editor
                     EditorUtility.SetDirty(_config);
                 }
             }
+            
+            
         }
 #endif
     }

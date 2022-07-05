@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GroupOrLabelName: avatar
   Keys:
-  - 00_1_Buttons
   - 00_2_Component
   - 00_3_FunctionIcons
   - 00_4_EquipmentIcons

@@ -3,7 +3,7 @@ using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
-namespace Wolffun.CodeGen.Addressables
+namespace Wolffun.CodeGen.MagicString
 {
     /// <summary>
     /// Group all key by its Asset group or a label

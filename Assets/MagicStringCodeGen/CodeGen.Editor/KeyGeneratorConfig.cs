@@ -4,7 +4,7 @@ using UnityEngine;
 
 // ReSharper disable CheckNamespace
 
-namespace Wolffun.CodeGen.Addressables.Editor
+namespace Wolffun.CodeGen.MagicString.Editor
 {
     [Serializable]
     public class KeyGeneratorConfig

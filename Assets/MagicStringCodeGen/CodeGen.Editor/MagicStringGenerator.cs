@@ -7,19 +7,33 @@ using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using UnityEditor;
+using UnityEditor.Localization;
 using UnityEngine;
 
 // ReSharper disable CheckNamespace
 
-namespace Wolffun.CodeGen.Addressables.Editor
+namespace Wolffun.CodeGen.MagicString.Editor
 {
-    public static class AddressableKeyGenerator
+    public static class MagicStringGenerator
     {
         public static void GenerateAddressableKeys(KeyGeneratorConfig config)
         {
             try
             {
-                Write(GetKeyGroups(), config);
+                Write(GetAddressableKeyGroups(), config);
+            }
+            catch (Exception e)
+            {
+                Debug.LogError(e);
+                throw;
+            }
+        }
+
+        public static void GenerateLocalizationKeys(KeyGeneratorConfig config)
+        {
+            try
+            {
+                Write(GetLocalizationTableGroups(), config);
             }
             catch (Exception e)
             {
@@ -98,7 +112,34 @@ namespace Wolffun.CodeGen.Addressables.Editor
             GenerateCSharpCode(targetUnit, config.GetFullOutputPath());
         }
 
-        static Dictionary<string, HashSet<string>> GetKeyGroups()
+        static Dictionary<string, HashSet<string>> GetLocalizationTableGroups()
+        {
+            var collections = LocalizationEditorSettings.GetStringTableCollections();
+            var keyGroups = new Dictionary<string, HashSet<string>>();
+            foreach (var tableCollection in collections)
+            {
+                var stringTables = tableCollection.StringTables;
+                foreach (var table in stringTables)
+                {
+                    var stringTableEntries = table.Values;
+                    var keys = new HashSet<string>();
+                    foreach (var stringTableEntry in stringTableEntries)
+                    {
+                        var key = stringTableEntry.Key;
+                        if (string.IsNullOrEmpty(key))
+                        {
+                            continue;
+                        }
+                        keys.Add(key);
+                    }
+                    keyGroups.Add(table.TableCollectionName, keys);
+                }
+
+            }
+            return keyGroups;
+        }
+
+        static Dictionary<string, HashSet<string>> GetAddressableKeyGroups()
         {
             var groups = UnityEditor.AddressableAssets.AddressableAssetSettingsDefaultObject.Settings.groups;
             var keyGroups = new Dictionary<string, HashSet<string>>();
@@ -179,7 +220,7 @@ namespace Wolffun.CodeGen.Addressables.Editor
                 AssetDatabase.CreateAsset(keyGroupData, assetPath);
             }
 
-            var keyGroups = GetKeyGroups();
+            var keyGroups = GetAddressableKeyGroups();
             foreach (var group in keyGroups)
             {
                 var path = config.GetFullPathScriptableObject(group.Key + "_key_group");
@@ -198,7 +239,7 @@ namespace Wolffun.CodeGen.Addressables.Editor
         {
             var labelGroups = GetLabelGroups();
             UpdateScriptableObjects(labelGroups);
-            var keyGroups = GetKeyGroups();
+            var keyGroups = GetAddressableKeyGroups();
             UpdateScriptableObjects(keyGroups);
             AssetDatabase.SaveAssets();
             EditorUtility.FocusProjectWindow();
@@ -257,7 +298,7 @@ namespace Wolffun.CodeGen.Addressables.Editor
             }
             else
             {
-                var keyGroups = GetKeyGroups();
+                var keyGroups = GetAddressableKeyGroups();
                 if (keyGroups.ContainsKey(labelOrGroupName))
                 {
                     asset.GroupOrLabelName = labelOrGroupName;

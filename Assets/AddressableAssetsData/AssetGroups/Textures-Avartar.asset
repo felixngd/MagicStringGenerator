@@ -17,12 +17,6 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: bdfb17bfc6aba4fb1aa66a1208beef42
   m_SerializeEntries:
-  - m_GUID: 777b62737db1b4f1b9e167c7f312dc50
-    m_Address: 00_1_Buttons
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - avatar
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0d6355464a16e44e9b1081216f57429a
     m_Address: 00_2_Component
     m_ReadOnly: 0

@@ -1,13 +1,12 @@
 {
-    "name": "Addressable.CodeGen.Editor",
+    "name": "MagicString.CodeGen.Runtime",
     "rootNamespace": "",
     "references": [
-        "Addressables.CodeGen.Runtime",
-        "Unity.Addressables.Editor"
+        "Unity.Addressables",
+        "UniTask",
+        "Unity.AddressablesManager"
     ],
-    "includePlatforms": [
-        "Editor"
-    ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
