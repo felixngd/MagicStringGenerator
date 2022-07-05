@@ -33,7 +33,7 @@ done
 
 [ -z "$SEMVER" ] && echo "You must provide the --semver option." && exit 1
 
-PREFIX="Assets/AddressablesCodeGen"
+PREFIX="Assets/MagicStringCodeGen"
 BRANCH="upm"
 
 git subtree split --prefix="$PREFIX" --branch $BRANCH
