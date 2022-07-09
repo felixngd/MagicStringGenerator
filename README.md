@@ -7,7 +7,7 @@
 
 git: [`https://github.com/datndwolffun/AddressablesKeyGenerator.git`](https://github.com/datndwolffun/AddressablesKeyGenerator.git)
 
-chọn bản lớn nhất từ `com.wolffun.codegen.addressables`
+chọn bản lớn nhất từ `com.wolffun.codegen.magicstring`
 
 ## Dùng như thế nào?
 
