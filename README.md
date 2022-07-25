@@ -1,19 +1,18 @@
-## Tính năng
+## Feature
 
-- 1 click sinh code C# tất cả các key của assets trong các group Addressables
-- Tùy chọn tích hợp với Odin Inspector
+- One click automatically generate C# constant string classes.
+- A solution for archieving zero allocation of magic string in Addressables and Localization.
+- Optional integrate with Odin Inspector.
 
-## Cài đặt
+## Setup
+Use [UPMGitExtension](https://github.com/mob-sakai/UpmGitExtension) to install from git tag.
+Get the lastest version of `com.wolffun.codegen.magicstring`
 
-git: [`https://github.com/datndwolffun/AddressablesKeyGenerator.git`](https://github.com/datndwolffun/AddressablesKeyGenerator.git)
+## How to use?
 
-chọn bản lớn nhất từ `com.wolffun.codegen.magicstring`
+1. Open the Editor tool by Tools>CodeGen>Magic String Generator
 
-## Dùng như thế nào?
+<img width="420" alt="image" src="https://user-images.githubusercontent.com/58353771/180696609-4730c65d-7d8b-4358-8d88-e9c634b63fe9.png">
 
-1. Chọn Tools>CodeGen>Addressable Key Generator
-
-![image](https://user-images.githubusercontent.com/105283697/170400970-6e831b60-4297-488e-8b5a-eb08c2fd7d99.png)
-
-1. Cài đặt namespace, class name cho file code được sinh ra và thư mục lưu file đó.
-2. Giờ có thể gọi những key này ở bất kỳ đâu trong code của bạn theo cú pháp `ClassName.GroupName.Key` ví dụ`AddressableKey.TexturesAvartar._48Guild`
+2. Set a namespace, class name and file name for the generated C# file. Pick a folder to save the file.
+3. Now you can access these strings from code by syntax `ClassName.GroupName.Key`. For example `AddressableKey.TexturesAvartar._48Guild`
