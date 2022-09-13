@@ -76,7 +76,7 @@ namespace Wolffun.CodeGen.MagicString.Editor
                 var keys = keyGroup.Value;
                 //regex spaces and special characters excepts underscore
                 var regex = new Regex(@"[^a-zA-Z0-9_ ]");
-                var className = regex.Replace(keyGroup.Key, string.Empty);
+                var className = regex.Replace(keyGroup.Key, string.Empty).Replace(" ", "_");
                 //if keyName start with number, add _
                 if (char.IsDigit(className[0]))
                 {
