@@ -75,7 +75,7 @@ namespace Wolffun.CodeGen.MagicString.Editor
             {
                 var keys = keyGroup.Value;
                 //regex spaces and special characters excepts underscore
-                var regex = new Regex(@"[^a-zA-Z0-9_]");
+                var regex = new Regex(@"[^a-zA-Z0-9_ ]");
                 var className = regex.Replace(keyGroup.Key, string.Empty);
                 //if keyName start with number, add _
                 if (char.IsDigit(className[0]))
@@ -92,7 +92,7 @@ namespace Wolffun.CodeGen.MagicString.Editor
                 targetClass.Members.Add(localClass);
                 foreach (var key in keys)
                 {
-                    var fieldName = regex.Replace(key, string.Empty);
+                    var fieldName = regex.Replace(key, string.Empty).Replace(" ", "_");;
                     if (string.IsNullOrEmpty(fieldName))
                         continue;
                     //if keyName start with number, add _
