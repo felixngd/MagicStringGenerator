@@ -93,6 +93,8 @@ namespace Wolffun.CodeGen.MagicString.Editor
                 foreach (var key in keys)
                 {
                     var fieldName = regex.Replace(key, string.Empty);
+                    if (string.IsNullOrEmpty(fieldName))
+                        continue;
                     //if keyName start with number, add _
                     if (char.IsDigit(fieldName[0]))
                     {
@@ -130,9 +132,11 @@ namespace Wolffun.CodeGen.MagicString.Editor
                         {
                             continue;
                         }
+
                         keys.Add(key);
                     }
-                    if(keyGroups.ContainsKey(table.TableCollectionName))
+
+                    if (keyGroups.ContainsKey(table.TableCollectionName))
                     {
                         keyGroups[table.TableCollectionName].UnionWith(keys);
                     }
@@ -141,8 +145,8 @@ namespace Wolffun.CodeGen.MagicString.Editor
                         keyGroups.Add(table.TableCollectionName, keys);
                     }
                 }
-
             }
+
             return keyGroups;
         }
 
