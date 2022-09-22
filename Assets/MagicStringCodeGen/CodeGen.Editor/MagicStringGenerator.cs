@@ -99,7 +99,7 @@ namespace Wolffun.CodeGen.MagicString.Editor
                 targetClass.Members.Add(localClass);
                 foreach (var key in keys)
                 {
-                    var fieldName = regex.Replace(key, string.Empty).Replace(" ", "_");;
+                    var fieldName = regex.Replace(key, string.Empty).Replace(" ", "_").Replace("-", "_");
                     if (string.IsNullOrEmpty(fieldName))
                         continue;
                     //if keyName start with number, add _
