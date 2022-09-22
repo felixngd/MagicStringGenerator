@@ -15,5 +15,5 @@ MonoBehaviour:
   keyGeneratorConfig:
     namespace: Wolffun.CodeGen.Addressables
     className: AddressableKey
-    staticClassOutputPath: Assets/Scripts/Addressables
-    scriptableObjectPath: Assets/Data
+    staticClassOutputPath: Scripts/Addressables
+    scriptableObjectPath: 
