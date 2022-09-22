@@ -82,8 +82,8 @@ namespace Wolffun.CodeGen.MagicString.Editor
             {
                 var keys = keyGroup.Value;
                 //regex spaces and special characters excepts underscore
-                var regex = new Regex(@"[^a-zA-Z0-9_]");
-                var className = regex.Replace(keyGroup.Key, string.Empty).Replace(" ", "_");
+                var regex = new Regex(@"[^a-zA-Z0-9_ -]");
+                var className = regex.Replace(keyGroup.Key, string.Empty).Replace(" ", "_").Replace("-", "_");
                 //if keyName start with number, add _
                 if (char.IsDigit(className[0]))
                 {
@@ -159,7 +159,7 @@ namespace Wolffun.CodeGen.MagicString.Editor
 
         static Dictionary<string, HashSet<string>> GetAddressableKeyGroups(AddressableAssetGroup[] groups = null)
         {
-            if(groups == null)
+            if(groups == null || groups.Length == 0)
                 groups = AddressableAssetSettingsDefaultObject.Settings.groups.ToArray();
             //var groups = UnityEditor.AddressableAssets.AddressableAssetSettingsDefaultObject.Settings.groups;
             var keyGroups = new Dictionary<string, HashSet<string>>();

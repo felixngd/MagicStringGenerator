@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LocalizationCodeGenConfig
   m_EditorClassIdentifier: 
   keyGeneratorConfig:
-    namespace: Wolffun.CodeGen.Localization
-    className: LocalizationKey
-    staticClassOutputPath: Assets/Scripts/Generated
+    namespace: 
+    className: 
+    staticClassOutputPath: 
     scriptableObjectPath: 

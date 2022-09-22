@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AddressablesCodeGenConfig
   m_EditorClassIdentifier: 
   keyGeneratorConfig:
-    namespace: Wolffun.CodeGen.Addressables
-    className: AddressableKey
-    staticClassOutputPath: Scripts/Addressables
+    namespace: 
+    className: 
+    staticClassOutputPath: 
     scriptableObjectPath: 
