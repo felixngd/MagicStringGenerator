@@ -54,7 +54,7 @@ namespace Wolffun.CodeGen.MagicString.Editor
         {
             CreateConfigFolderIfNotAvailable();
             _addressableStringConfig =
-                Resources.Load<ConfigAsset>(Path.Combine(ConfigPath, $"AddressablesCodeGenConfig"));
+                Resources.Load<ConfigAsset>("AddressablesCodeGenConfig");
             if (_addressableStringConfig == null)
             {
                 //create new one
@@ -72,7 +72,7 @@ namespace Wolffun.CodeGen.MagicString.Editor
             }
 
             _localizationStringConfig =
-                Resources.Load<ConfigAsset>(Path.Combine(ConfigPath, "LocalizationCodeGenConfig"));
+                Resources.Load<ConfigAsset>("LocalizationCodeGenConfig");
             if(_localizationStringConfig == null)
             {
                 //create new one
