@@ -17,5 +17,5 @@ jobs:
       - name: release
         run: |
           set -euxo pipefail
-          version=$(jq -r .version  Assets/ThetanUnityNetwork/package.json)
+          version=$(jq -r .version  Assets/MagicStringCodeGen/package.json)
           bash ./deploy.sh --semver $version
