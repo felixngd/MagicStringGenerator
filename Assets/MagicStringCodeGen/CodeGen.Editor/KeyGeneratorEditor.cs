@@ -333,7 +333,7 @@ namespace Wolffun.CodeGen.MagicString.Editor
                 };
                 try
                 {
-                    AddressableKeyGenerator.GenerateAddressableKeys(_config.keyGeneratorConfig);
+                    MagicStringGenerator.GenerateAddressableKeys(_config.keyGeneratorConfig);
                     //dialog
                     EditorUtility.DisplayDialog("Success", "Addressable keys generated successfully", "Ok");
                 }
@@ -373,7 +373,7 @@ namespace Wolffun.CodeGen.MagicString.Editor
 
                 try
                 {
-                    AddressableKeyGenerator.CreateScriptableObjects(_config.keyGeneratorConfig);
+                    MagicStringGenerator.CreateScriptableObjects(_config.keyGeneratorConfig);
                     //dialog
                     EditorUtility.DisplayDialog("Success", "Scriptable objects created successfully", "Ok");
                 }
@@ -401,7 +401,7 @@ namespace Wolffun.CodeGen.MagicString.Editor
 
                 try
                 {
-                    AddressableKeyGenerator.UpdateScriptableObjects();
+                    MagicStringGenerator.UpdateScriptableObjects();
                     //dialog
                     EditorUtility.DisplayDialog("Success", "Scriptable objects updated successfully", "Ok");
                 }

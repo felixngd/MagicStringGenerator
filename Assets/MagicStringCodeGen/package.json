@@ -1,6 +1,6 @@
 {
   "name": "com.wolffun.codegen.magicstring",
-  "version": "1.0.0-preview.17",
+  "version": "1.0.0-preview.18",
   "displayName": "Magic String Key Generator",
   "description": "Tool for generating magic strings of Addressables and Localization",
   "unity": "2019.4",
