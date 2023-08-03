@@ -49,57 +49,73 @@ namespace Wolffun.CodeGen.MagicString.Editor
             }
         }
 
-        private static void GenerateCSharpCode(CodeCompileUnit targetUnit, string fileName)
+        private static void GenerateCSharpCode(CodeCompileUnit[] targetUnits, string fileName)
         {
             var provider = CodeDomProvider.CreateProvider("CSharp");
             var options = new CodeGeneratorOptions();
             options.BracingStyle = "C";
             options.BlankLinesBetweenMembers = true;
             options.VerbatimOrder = true;
-
-            using (var sourceWriter = new StreamWriter(fileName))
+            
+            //remove .cs from last of fileName
+            fileName = Regex.Replace(fileName, ".cs$", "");
+            
+            int index = 0;
+            foreach (var targetUnit in targetUnits)
             {
-                provider.GenerateCodeFromCompileUnit(targetUnit, sourceWriter, options);
+                //add index to fileName and add .cs
+                var newFileName = $"{fileName}_{index++}.cs";
+
+                using (var sourceWriter = new StreamWriter(newFileName))
+                {
+                    provider.GenerateCodeFromCompileUnit(targetUnit, sourceWriter, options);
+                }
             }
+
 
             AssetDatabase.Refresh();
         }
 
         static void Write(Dictionary<string, HashSet<string>> keyGroups, KeyGeneratorConfig config)
         {
-            var targetUnit = new CodeCompileUnit();
-            var codeNamespace = new CodeNamespace(config.Namespace);
-            var targetClass = new CodeTypeDeclaration(config.ClassName)
+            List<CodeCompileUnit> targetUnits = new List<CodeCompileUnit>();
+            foreach (var (key, value) in keyGroups)
             {
-                IsClass = true,
-                TypeAttributes = TypeAttributes.Public | TypeAttributes.Sealed
-            };
+                var targetUnit = new CodeCompileUnit();
+                var codeNamespace = new CodeNamespace(config.Namespace);
+                var targetClass = new CodeTypeDeclaration(config.ClassName)
+                {
+                    IsClass = true,
+                    TypeAttributes = TypeAttributes.Public | TypeAttributes.Sealed,
+                    IsPartial = true
+                };
 
-            codeNamespace.Types.Add(targetClass);
-            targetUnit.Namespaces.Add(codeNamespace);
+                codeNamespace.Types.Add(targetClass);
+                targetUnit.Namespaces.Add(codeNamespace);
 
-            foreach (var keyGroup in keyGroups)
-            {
-                var keys = keyGroup.Value;
-                //regex spaces and special characters excepts underscore
                 var regex = new Regex(@"[^a-zA-Z0-9_ -]");
-                var className = regex.Replace(keyGroup.Key, string.Empty).Replace(" ", "_").Replace("-", "_");
+                var className = regex.Replace(key, string.Empty).Replace(" ", "_").Replace("-", "_").Replace("\\", "_")
+                    .Replace("/", "_");
+                //remove special character from className
+                className = Regex.Replace(className, "[^a-zA-Z0-9_]", "");
                 //if keyName start with number, add _
                 if (char.IsDigit(className[0]))
                 {
                     className = "_" + className;
                 }
 
-                //add a local class
                 var localClass = new CodeTypeDeclaration(className)
                 {
                     IsClass = true,
                     TypeAttributes = TypeAttributes.Public | TypeAttributes.Sealed
                 };
                 targetClass.Members.Add(localClass);
-                foreach (var key in keys)
+
+                foreach (var keyName in value)
                 {
-                    var fieldName = regex.Replace(key, string.Empty).Replace(" ", "_").Replace("-", "_");
+                    var fieldName = keyName.Replace(" ", "_").Replace("-", "_").Replace("\\", "_").Replace("/", "_");
+                    //remove special character from fieldName
+                    fieldName = Regex.Replace(fieldName, "[^a-zA-Z0-9_]", "");
                     if (string.IsNullOrEmpty(fieldName))
                         continue;
                     //if keyName start with number, add _
@@ -110,15 +126,18 @@ namespace Wolffun.CodeGen.MagicString.Editor
 
                     var idField = new CodeMemberField(typeof(string), fieldName)
                     {
-                        Attributes = MemberAttributes.Public | MemberAttributes.Const,
-                        InitExpression = new CodePrimitiveExpression(key)
+                        Attributes = MemberAttributes.Public | MemberAttributes.Static,
+                        InitExpression = new CodePrimitiveExpression(keyName)
                     };
 
                     localClass.Members.Add(idField);
                 }
+
+                targetUnits.Add(targetUnit);
             }
 
-            GenerateCSharpCode(targetUnit, config.GetFullOutputPath());
+
+            GenerateCSharpCode(targetUnits.ToArray(), config.GetFullOutputPath());
         }
 
         static Dictionary<string, HashSet<string>> GetLocalizationTableGroups()
@@ -159,7 +178,7 @@ namespace Wolffun.CodeGen.MagicString.Editor
 
         static Dictionary<string, HashSet<string>> GetAddressableKeyGroups(AddressableAssetGroup[] groups = null)
         {
-            if(groups == null || groups.Length == 0)
+            if (groups == null || groups.Length == 0)
                 groups = AddressableAssetSettingsDefaultObject.Settings.groups.ToArray();
             //var groups = UnityEditor.AddressableAssets.AddressableAssetSettingsDefaultObject.Settings.groups;
             var keyGroups = new Dictionary<string, HashSet<string>>();
