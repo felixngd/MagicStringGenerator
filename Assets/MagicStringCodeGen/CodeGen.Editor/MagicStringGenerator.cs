@@ -126,7 +126,7 @@ namespace Wolffun.CodeGen.MagicString.Editor
 
                     var idField = new CodeMemberField(typeof(string), fieldName)
                     {
-                        Attributes = MemberAttributes.Public | MemberAttributes.Static,
+                        Attributes = MemberAttributes.Public | MemberAttributes.Const,
                         InitExpression = new CodePrimitiveExpression(keyName)
                     };
 
