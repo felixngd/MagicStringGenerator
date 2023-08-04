@@ -36,6 +36,22 @@ namespace Wolffun.CodeGen.MagicString.Editor
             }
         }
 
+        public static void DefaultGenerateLocalizationKeys()
+        {
+            try
+            {            
+                var _localizationStringConfig =
+                Resources.Load<ConfigAsset>("LocalizationCodeGenConfig");
+                Write(GetLocalizationTableGroups(), _localizationStringConfig.keyGeneratorConfig);
+            }
+            catch (Exception e)
+            {
+                Debug.LogError(e);
+                throw;
+            }
+        }
+
+
         public static void GenerateLocalizationKeys(KeyGeneratorConfig config)
         {
             try
@@ -49,7 +65,7 @@ namespace Wolffun.CodeGen.MagicString.Editor
             }
         }
 
-        private static void GenerateCSharpCode(CodeCompileUnit[] targetUnits, string fileName)
+        private static void GenerateCSharpCode(CodeCompileUnit[] targetUnits, string[] keyArr, string fileName)
         {
             var provider = CodeDomProvider.CreateProvider("CSharp");
             var options = new CodeGeneratorOptions();
@@ -63,13 +79,16 @@ namespace Wolffun.CodeGen.MagicString.Editor
             int index = 0;
             foreach (var targetUnit in targetUnits)
             {
+                var className = keyArr[index];
                 //add index to fileName and add .cs
-                var newFileName = $"{fileName}_{index++}.cs";
+                var newFileName = $"{fileName}.{className}.cs";
 
                 using (var sourceWriter = new StreamWriter(newFileName))
                 {
                     provider.GenerateCodeFromCompileUnit(targetUnit, sourceWriter, options);
                 }
+
+                index++;
             }
 
 
@@ -79,8 +98,14 @@ namespace Wolffun.CodeGen.MagicString.Editor
         static void Write(Dictionary<string, HashSet<string>> keyGroups, KeyGeneratorConfig config)
         {
             List<CodeCompileUnit> targetUnits = new List<CodeCompileUnit>();
+
+            List<string> keyArr = new List<string>();
+
             foreach (var (key, value) in keyGroups)
             {
+
+                Debug.Log(key);
+
                 var targetUnit = new CodeCompileUnit();
                 var codeNamespace = new CodeNamespace(config.Namespace);
                 var targetClass = new CodeTypeDeclaration(config.ClassName)
@@ -93,11 +118,17 @@ namespace Wolffun.CodeGen.MagicString.Editor
                 codeNamespace.Types.Add(targetClass);
                 targetUnit.Namespaces.Add(codeNamespace);
 
+                
+
+
                 var regex = new Regex(@"[^a-zA-Z0-9_ -]");
                 var className = regex.Replace(key, string.Empty).Replace(" ", "_").Replace("-", "_").Replace("\\", "_")
                     .Replace("/", "_");
                 //remove special character from className
                 className = Regex.Replace(className, "[^a-zA-Z0-9_]", "");
+
+
+
                 //if keyName start with number, add _
                 if (char.IsDigit(className[0]))
                 {
@@ -110,6 +141,8 @@ namespace Wolffun.CodeGen.MagicString.Editor
                     TypeAttributes = TypeAttributes.Public | TypeAttributes.Sealed
                 };
                 targetClass.Members.Add(localClass);
+
+                keyArr.Add(className);
 
                 foreach (var keyName in value)
                 {
@@ -137,7 +170,7 @@ namespace Wolffun.CodeGen.MagicString.Editor
             }
 
 
-            GenerateCSharpCode(targetUnits.ToArray(), config.GetFullOutputPath());
+            GenerateCSharpCode(targetUnits.ToArray(), keyArr.ToArray(), config.GetFullOutputPath());
         }
 
         static Dictionary<string, HashSet<string>> GetLocalizationTableGroups()
