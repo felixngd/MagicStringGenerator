@@ -103,9 +103,6 @@ namespace Wolffun.CodeGen.MagicString.Editor
 
             foreach (var (key, value) in keyGroups)
             {
-
-                Debug.Log(key);
-
                 var targetUnit = new CodeCompileUnit();
                 var codeNamespace = new CodeNamespace(config.Namespace);
                 var targetClass = new CodeTypeDeclaration(config.ClassName)
