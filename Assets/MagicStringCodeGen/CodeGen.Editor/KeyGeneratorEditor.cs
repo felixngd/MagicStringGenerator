@@ -1,8 +1,5 @@
-#if ODIN_INSPECTOR || ODIN_INSPECTOR_3_0_OR_NEWER
 using Sirenix.OdinInspector;
 using Sirenix.OdinInspector.Editor;
-using UnityEditor.AddressableAssets.Settings;
-#endif
 using System;
 using System.IO;
 using UnityEditor;
@@ -12,19 +9,14 @@ using UnityEngine;
 
 namespace Wolffun.CodeGen.MagicString.Editor
 {
-#if ODIN_INSPECTOR || ODIN_INSPECTOR_3_0_OR_NEWER
     public class KeyGeneratorEditor : OdinEditorWindow
     {
-#else
-    public class KeyGeneratorEditor : EditorWindow
-    {
-#endif
         [MenuItem("Tools/CodeGen/Magic String Generator")]
         public static void ShowWindow()
         {
             GetWindow(typeof(KeyGeneratorEditor));
         }
-#if ODIN_INSPECTOR || ODIN_INSPECTOR_3_0_OR_NEWER
+
         [LabelText("Namespace"), TabGroup("Addressable Magic Strings")]
         public string addressableStringNameSpace = "Wolffun.CodeGen.Addressables";
 
@@ -35,7 +27,7 @@ namespace Wolffun.CodeGen.MagicString.Editor
         public string addressableStringOutputPath = "Assets/Scripts/Generated";
 
         [TabGroup("Addressable Magic Strings")]
-        public AddressableAssetGroup[] includeAddressableGroups;
+        public AddressableGroupsCodeGenConfig includeAddressableGroups;
 
         [LabelText("Namespace"), TabGroup("Localization Magic Strings")]
         public string localizationStringNameSpace = "Wolffun.CodeGen.Localization";
@@ -62,6 +54,21 @@ namespace Wolffun.CodeGen.MagicString.Editor
                 //save scriptable object to Resources folder
                 AssetDatabase.CreateAsset(_addressableStringConfig, Path.Combine(ConfigPath, $"AddressablesCodeGenConfig.asset"));
                 AssetDatabase.SaveAssets();
+            }
+
+            if (includeAddressableGroups == null)
+            {
+                //find
+                includeAddressableGroups = AssetDatabase.LoadAssetAtPath<AddressableGroupsCodeGenConfig>(Path.Combine(ConfigPath, $"AddressableGroupsCodeGenConfig.asset"));
+                // if not found
+                if (includeAddressableGroups == null)
+                {
+                    //create new one
+                    includeAddressableGroups = CreateInstance<AddressableGroupsCodeGenConfig>();
+                    //save scriptable object to Resources folder
+                    AssetDatabase.CreateAsset(includeAddressableGroups, Path.Combine(ConfigPath, $"AddressableGroupsCodeGenConfig.asset"));
+                    AssetDatabase.SaveAssets();
+                }
             }
 
             if (_addressableStringConfig.keyGeneratorConfig != null)
@@ -124,7 +131,7 @@ namespace Wolffun.CodeGen.MagicString.Editor
             try
             {
                 MagicStringGenerator.GenerateAddressableKeys(_addressableStringConfig.keyGeneratorConfig,
-                    includeAddressableGroups);
+                    includeAddressableGroups.includeAddressableGroups);
                 //dialog
                 EditorUtility.DisplayDialog("Success", "Addressable keys generated successfully", "Ok");
             }
@@ -248,177 +255,7 @@ namespace Wolffun.CodeGen.MagicString.Editor
                 EditorUtility.SetDirty(_addressableStringConfig);
             }
         }
-
-
-#else
-        private ConfigAsset _config;
-
-        void OnEnable()
-        {
-            _config = Resources.Load<ConfigAsset>("AddressablesCodeGenConfig");
-        }
-
-        private void OnGUI()
-        {
-            GUILayout.Label("Addressables Key Generator", EditorStyles.boldLabel);
-            GUILayout.Label(
-                "Generate keys for all addressables group in the project as a <color=green>static class</color>",
-                EditorStyles.boldLabel);
-            //field for namespace
-            GUILayout.Label("Namespace", EditorStyles.boldLabel);
-
-            var namespaceField = GUILayout.TextField(_config.keyGeneratorConfig.Namespace);
-            if (namespaceField != _config.keyGeneratorConfig.Namespace)
-            {
-                _config.keyGeneratorConfig.Namespace = namespaceField;
-                EditorUtility.SetDirty(_config);
-            }
-
-            //field for output path
-            GUILayout.Label("Output Path", EditorStyles.boldLabel);
-            var outputPathField = GUILayout.TextField(_config.keyGeneratorConfig.StaticClassOutputPath);
-            if (outputPathField != _config.keyGeneratorConfig.StaticClassOutputPath)
-            {
-                _config.keyGeneratorConfig.StaticClassOutputPath = outputPathField;
-                EditorUtility.SetDirty(_config);
-            }
-
-            // field for class name
-            GUILayout.Label("Class Name", EditorStyles.boldLabel);
-            var classNameField = GUILayout.TextField(_config.keyGeneratorConfig.ClassName);
-            if (classNameField != _config.keyGeneratorConfig.ClassName)
-            {
-                _config.keyGeneratorConfig.ClassName = classNameField;
-                EditorUtility.SetDirty(_config);
-            }
-
-            if (!_config.keyGeneratorConfig.IsValid())
-            {
-                _config.keyGeneratorConfig = new KeyGeneratorConfig()
-                {
-                    Namespace = "Wolffun.CodeGen.Addressables",
-                    ClassName = "AddressableKey",
-                    StaticClassOutputPath = "Assets/Scripts/Addressables"
-                };
-            }
-
-            if (GUILayout.Button("Generate Keys"))
-            {
-                if (string.IsNullOrEmpty(namespaceField))
-                {
-                    //dialog
-                    EditorUtility.DisplayDialog("Error", "Namespace cannot be empty", "Ok");
-                    return;
-                }
-
-                if (string.IsNullOrEmpty(outputPathField))
-                {
-                    //dialog
-                    EditorUtility.DisplayDialog("Error", "Output path cannot be empty", "Ok");
-                    return;
-                }
-
-                if (string.IsNullOrEmpty(classNameField))
-                {
-                    //dialog
-                    EditorUtility.DisplayDialog("Error", "Class name cannot be empty", "Ok");
-                    return;
-                }
-
-                _config.keyGeneratorConfig = new KeyGeneratorConfig()
-                {
-                    Namespace = namespaceField,
-                    ClassName = classNameField,
-                    StaticClassOutputPath = outputPathField
-                };
-                try
-                {
-                    MagicStringGenerator.GenerateAddressableKeys(_config.keyGeneratorConfig);
-                    //dialog
-                    EditorUtility.DisplayDialog("Success", "Addressable keys generated successfully", "Ok");
-                }
-                catch (Exception e)
-                {
-                    Debug.LogError(e);
-                    throw;
-                }
-                finally
-                {
-                    EditorUtility.SetDirty(_config);
-                }
-            }
-
-            GUILayout.Space(30);
-            GUILayout.Label("Create scriptable objects for key groups", EditorStyles.boldLabel);
-
-            //field for scriptable objects out put
-            GUILayout.Label("Scriptable Object Output Path", EditorStyles.boldLabel);
-            var scriptableObjectOutputPathField = GUILayout.TextField(_config.keyGeneratorConfig.ScriptableObjectPath);
-            if (scriptableObjectOutputPathField != _config.keyGeneratorConfig.ScriptableObjectPath)
-            {
-                _config.keyGeneratorConfig.ScriptableObjectPath = scriptableObjectOutputPathField;
-                EditorUtility.SetDirty(_config);
-            }
-
-            if (GUILayout.Button("Create Scriptable Objects"))
-            {
-                if (string.IsNullOrEmpty(scriptableObjectOutputPathField))
-                {
-                    //dialog
-                    EditorUtility.DisplayDialog("Error", "Scriptable object output path cannot be empty", "Ok");
-                    return;
-                }
-
-                _config.keyGeneratorConfig.ScriptableObjectPath = scriptableObjectOutputPathField;
-
-                try
-                {
-                    MagicStringGenerator.CreateScriptableObjects(_config.keyGeneratorConfig);
-                    //dialog
-                    EditorUtility.DisplayDialog("Success", "Scriptable objects created successfully", "Ok");
-                }
-                catch (Exception e)
-                {
-                    Debug.LogError(e);
-                    throw;
-                }
-                finally
-                {
-                    EditorUtility.SetDirty(_config);
-                }
-            }
-            
-            if(GUILayout.Button("Update Scriptable Objects"))
-            {
-                if (string.IsNullOrEmpty(scriptableObjectOutputPathField))
-                {
-                    //dialog
-                    EditorUtility.DisplayDialog("Error", "Scriptable object output path cannot be empty", "Ok");
-                    return;
-                }
-
-                _config.keyGeneratorConfig.ScriptableObjectPath = scriptableObjectOutputPathField;
-
-                try
-                {
-                    MagicStringGenerator.UpdateScriptableObjects();
-                    //dialog
-                    EditorUtility.DisplayDialog("Success", "Scriptable objects updated successfully", "Ok");
-                }
-                catch (Exception e)
-                {
-                    Debug.LogError(e);
-                    throw;
-                }
-                finally
-                {
-                    EditorUtility.SetDirty(_config);
-                }
-            }
-            
-            
-        }
-#endif
+        
         private const string ConfigPath = "Assets/MagicStringGenerator/Editor/Resources";
 
         
