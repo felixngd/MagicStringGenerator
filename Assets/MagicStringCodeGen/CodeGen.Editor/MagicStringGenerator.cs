@@ -51,6 +51,22 @@ namespace Wolffun.CodeGen.MagicString.Editor
             }
         }
 
+        [MenuItem("mMenu/Default Gen Addr Key")]
+        public static void DefaultGenerateAddressableKeys()
+        {
+            try
+            {            
+                var _addressableStringConfig =
+                Resources.Load<ConfigAsset>("AddressablesCodeGenConfig");
+                Write(GetAddressableKeyGroups(Resources.Load<AddressableGroupsCodeGenConfig>("AddressableGroupsCodeGenConfig").includeAddressableGroups), _addressableStringConfig.keyGeneratorConfig);
+            }
+            catch (Exception e)
+            {
+                Debug.LogError(e);
+                throw;
+            }
+        }
+
 
         public static void GenerateLocalizationKeys(KeyGeneratorConfig config)
         {
