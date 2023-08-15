@@ -15,12 +15,10 @@ namespace WolffunGame
     public sealed partial class AddressableKey
     {
         
-        public sealed class Built_In_Data
+        public sealed class Default_Local_Group
         {
             
-            public static string Resources = "Resources";
-            
-            public static string EditorSceneList = "EditorSceneList";
+            public const string Assets_AddressebleAssets_Textures_Avartar_00_1_Buttonspng = "Assets/AddressebleAssets/Textures/Avartar/00_1_Buttons.png";
         }
     }
 }

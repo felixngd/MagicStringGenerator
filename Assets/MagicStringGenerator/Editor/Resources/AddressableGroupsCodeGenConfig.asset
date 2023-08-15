@@ -9,11 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f20513c192fb4a94972a290399ca0db1, type: 3}
-  m_Name: AddressablesCodeGenConfig
+  m_Script: {fileID: 11500000, guid: 196e30a0caa94a548429344b9bf91214, type: 3}
+  m_Name: AddressableGroupsCodeGenConfig
   m_EditorClassIdentifier: 
-  keyGeneratorConfig:
-    namespace: WolffunGame
-    className: AddressableKey
-    staticClassOutputPath: MagicStringGenerator/Generated
-    scriptableObjectPath: 
+  includeAddressableGroups: []
